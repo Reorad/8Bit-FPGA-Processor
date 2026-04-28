@@ -12,7 +12,7 @@ entity REGISTER_File is
         Sx_add : in STD_LOGIC_VECTOR(3 downto 0);
         Sy_add : in STD_LOGIC_VECTOR(3 downto 0);
         CLK : in STD_LOGIC;
-        Write_in : in STD_LOGIC;
+        Write_data : in STD_LOGIC;
         Operation_from_ALU : in STD_LOGIC_VECTOR(7 downto 0);
         RST : in STD_LOGIC;
         
@@ -35,7 +35,7 @@ begin
     process(CLK, RST)
         begin   
             if(RST = '1' ) then
-                S_Register : Reg_file := (others => (others => '0'));
+                S_Register <= (others => (others => '0'));
             elsif( Write_in = '1' AND rising_edge(CLK)) then
                 S_Register(to_integer(unsigned(Sx_add))) <= Operation_from_ALU;                                                                               
             end if;

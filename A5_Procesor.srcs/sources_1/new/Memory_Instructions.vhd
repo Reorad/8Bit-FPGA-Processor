@@ -10,7 +10,7 @@ entity Memory_Instructions is
           -- Helping stuff -- 
           Mux_B_decide : out STD_LOGIC;
           Rotation_Signal : out STD_LOGIC;
-          
+          Write_enable : out STD_LOGIC;
           -- Flag from ALU -- 
           Zero_flag : in STD_LOGIC;
           Carry_flag : in STD_LOGIC;
@@ -34,9 +34,10 @@ begin
     Type_conditional <= Memorie_in_instruction(12 downto 10);
     Mux_B_decide <= Memorie_in_instruction(15);
     Rotation_Signal <='0' ;
+    
     process (Memorie_in_instruction, Op_Register_KK, Operation_code_first, Flow_add)
     begin 
-        
+        Write_enable <= '1';
         JUMP_SIG <= '0';
         ALU_Sel <= (others => '0');
         Address_JUMP <= (others => '0');
@@ -61,11 +62,12 @@ begin
                    
                     case Flow_add is
                         when "10001" =>
+                            Write_enable <= '0';
                             JUMP_SIG     <= '1';
                             Address_JUMP <= Memorie_in_instruction(7 downto 0);
                         
                         when others =>
-                            -- Dacă nu e jump-ul așteptat, asigurăm că semnalul stă pe 0
+                            Write_enable <= '0';
                             JUMP_SIG <= '0';
                     end case;
                     

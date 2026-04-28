@@ -11,11 +11,11 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity TEST_TOP_LEVEL is
+entity TEST_PC_TOP_LEVEL is
 --  Port ( );
-end TEST_TOP_LEVEL;
+end TEST_PC_TOP_LEVEL;
 
-architecture Test of TEST_TOP_LEVEL is
+architecture Test of TEST_PC_TOP_LEVEL is
 
     component CP_TOP_LEVEL is
     port( CLK : in STD_LOGIC;
@@ -25,6 +25,7 @@ architecture Test of TEST_TOP_LEVEL is
           Carry_Flag : in STD_LOGIC;
           -- Rotation -- 
           Rotation_flag : out STD_LOGIC;
+          Write_enable : out STD_LOGIC;
           -- Mostly used for Debuging -- 
           Addres_out : out STD_LOGIC_VECTOR(15 downto 0);
           -- Signal for deciding using Constant or Register -- 
@@ -40,10 +41,11 @@ architecture Test of TEST_TOP_LEVEL is
     signal Mux_B_decide : STD_LOGIC;
     signal Rotation_flag : STD_LOGIC;
     signal Z,C : STD_LOGIC;
+    signal en_write : STD_LOGIC;
     
 begin
 
-    UUT : CP_TOP_LEVEL port map(CLK,RST,Z,C,Rotation_flag,Address_out,Mux_B_decide,ALU_OUT);
+    UUT : CP_TOP_LEVEL port map(CLK,RST,Z,C,Rotation_flag,en_write,Address_out,Mux_B_decide,ALU_OUT);
     
     process
         begin
