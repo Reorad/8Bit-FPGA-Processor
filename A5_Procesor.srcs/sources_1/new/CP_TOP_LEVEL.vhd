@@ -10,7 +10,10 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity CP_TOP_LEVEL is
     port( CLK : in STD_LOGIC;
           RST : in STD_LOGIC;
-
+          -- Flags from ALU -- 
+          Zero_Flag : in STD_LOGIC;
+          Carry_Flag : in STD_LOGIC;
+          -- Mostly used for Debuging -- 
           Addres_out : out STD_LOGIC_VECTOR(15 downto 0);
           -- Signal for deciding using Constant or Register -- 
           Konstant : out STD_LOGIC;
@@ -43,6 +46,8 @@ architecture Structural of CP_TOP_LEVEL is
     
     component Memory_Instructions is
     port( Memorie_in_instruction : in STD_LOGIC_VECTOR(15 downto 0);
+          Zero_flag : in STD_LOGIC;
+          Carry_flag : in STD_LOGIC;
           JUMP_SIG : out STD_LOGIC; 
           ALU_Sel : out STD_LOGIC_VECTOR(2 downto 0);
           Address_JUMP : out STD_LOGIC_VECTOR(7 downto 0);
@@ -50,6 +55,8 @@ architecture Structural of CP_TOP_LEVEL is
           Memorie_debug_instuction : out STD_LOGIC_VECTOR (15 downto 0)
           );
     end component;
+    
+    -- signals from ALU -- 
     
     signal JUMP_FROM_DECODER : STD_LOGIC := '0';
     signal JUMP_ADDRESS_FROM_DECODER : STD_LOGIC_VECTOR(7 downto 0) :=(others =>'0');
@@ -82,6 +89,8 @@ begin
                     JUMP_SIG => JUMP_FROM_DECODER,
                     ALU_Sel  => ALU_OUT,
                     Mux_B_decide => Konstant,
+                    Zero_flag => Zero_Flag,
+                    Carry_Flag => Carry_Flag, 
                     Address_JUMP => JUMP_ADDRESS_FROM_DECODER,
                     Memorie_debug_instuction => Addres_out
                     );

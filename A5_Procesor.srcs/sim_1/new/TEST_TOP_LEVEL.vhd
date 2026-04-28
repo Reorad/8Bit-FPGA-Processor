@@ -20,11 +20,11 @@ architecture Test of TEST_TOP_LEVEL is
     component CP_TOP_LEVEL is
     port( CLK : in STD_LOGIC;
           RST : in STD_LOGIC;
-
+          Zero_Flag : in STD_LOGIC;
+          Carry_Flag : in STD_LOGIC;
           Addres_out : out STD_LOGIC_VECTOR(15 downto 0);
-          
+          -- Signal for deciding using Constant or Register -- 
           Konstant : out STD_LOGIC;
-          
           -- SIGNALS FOR ADD, SUB, MOV , JUMP , XOR , AND ... -- 
           ALU_OUT : out STD_LOGIC_VECTOR(2 downto 0)
           );
@@ -34,9 +34,12 @@ architecture Test of TEST_TOP_LEVEL is
     signal Address_out : STD_LOGIC_VECTOR(15 downto 0);
     signal ALU_OUT : STD_LOGIC_VECTOR(2 downto 0);
     signal Mux_B_decide : STD_LOGIC;
+    
+    signal Z,C : STD_LOGIC;
+    
 begin
 
-    UUT : CP_TOP_LEVEL port map(CLK,RST,Address_out,Mux_B_decide,ALU_OUT);
+    UUT : CP_TOP_LEVEL port map(CLK,RST,Z,C,Address_out,Mux_B_decide,ALU_OUT);
     
     process
         begin
