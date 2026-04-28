@@ -7,7 +7,14 @@ entity Memory_Instructions is
           JUMP_SIG : out STD_LOGIC; 
           ALU_Sel : out STD_LOGIC_VECTOR(2 downto 0);
           Address_JUMP : out STD_LOGIC_VECTOR(7 downto 0);
+          -- Helping stuff -- 
           Mux_B_decide : out STD_LOGIC;
+          Rotation_Signal : out STD_LOGIC;
+          
+          -- Flag from ALU -- 
+          Zero_flag : in STD_LOGIC;
+          Carry_flag : in STD_LOGIC;
+          -- Debug and used for selecting Mux -- 
           Memorie_debug_instuction : out STD_LOGIC_VECTOR (15 downto 0)
           );
 end Memory_Instructions;
@@ -26,6 +33,7 @@ begin
     Flow_add <= Memorie_in_instruction(15 downto 13) & Memorie_in_instruction(9 downto 8);
     Type_conditional <= Memorie_in_instruction(12 downto 10);
     Mux_B_decide <= Memorie_in_instruction(15);
+    Rotation_Signal <='0' ;
     process (Memorie_in_instruction, Op_Register_KK, Operation_code_first, Flow_add)
     begin 
         
@@ -48,7 +56,7 @@ begin
                     
                 when "1101" | "1010" | "1011" | "1110" | "1111" =>
                     Memorie_debug_instuction <= "0000000000001111";
-                    
+                    Rotation_Signal <= '1';
                 when others =>
                    
                     case Flow_add is

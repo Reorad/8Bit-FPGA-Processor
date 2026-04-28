@@ -13,6 +13,8 @@ entity CP_TOP_LEVEL is
           -- Flags from ALU -- 
           Zero_Flag : in STD_LOGIC;
           Carry_Flag : in STD_LOGIC;
+          -- Rotation -- 
+          Rotation_flag : out STD_LOGIC;
           -- Mostly used for Debuging -- 
           Addres_out : out STD_LOGIC_VECTOR(15 downto 0);
           -- Signal for deciding using Constant or Register -- 
@@ -46,12 +48,13 @@ architecture Structural of CP_TOP_LEVEL is
     
     component Memory_Instructions is
     port( Memorie_in_instruction : in STD_LOGIC_VECTOR(15 downto 0);
-          Zero_flag : in STD_LOGIC;
-          Carry_flag : in STD_LOGIC;
           JUMP_SIG : out STD_LOGIC; 
           ALU_Sel : out STD_LOGIC_VECTOR(2 downto 0);
           Address_JUMP : out STD_LOGIC_VECTOR(7 downto 0);
           Mux_B_decide : out STD_LOGIC;
+          Rotation_Signal : out STD_LOGIC;
+          Zero_flag : in STD_LOGIC;
+          Carry_flag : in STD_LOGIC;
           Memorie_debug_instuction : out STD_LOGIC_VECTOR (15 downto 0)
           );
     end component;
@@ -89,6 +92,7 @@ begin
                     JUMP_SIG => JUMP_FROM_DECODER,
                     ALU_Sel  => ALU_OUT,
                     Mux_B_decide => Konstant,
+                    Rotation_Signal => Rotation_flag,
                     Zero_flag => Zero_Flag,
                     Carry_Flag => Carry_Flag, 
                     Address_JUMP => JUMP_ADDRESS_FROM_DECODER,
