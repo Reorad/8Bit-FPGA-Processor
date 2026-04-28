@@ -4,3 +4,5 @@ import vitis
 client = vitis.create_client()
 client.set_workspace(path="A5_Procesor")
 
+vitis.dispose()
+

@@ -1,21 +1,13 @@
-# Ignore build output directory
-/build
-/export
+# Vivado Specific
+*.jou              # Journal files (comenzile Tcl executate)
+*.log              # Log files
+.Xil/              # Folderul temporar de rulare Vivado
+*.str              # Fișiere de tip "stress" / UI state
 
-# Ignore object files and dependent files
-.o
-.d
-
-#Ignore logs folder and log files
-/logs
-.log
-
-#Ignore lock files
-.lock
-
-.bin
-.pdi
-.vitisWorkspace.json
-
-_ide/logs
-_ide/.wsdata
+# Proiect și Rezultate
+*.runs/            # Rezultatele sintezei și implementării (Sute de MB!)
+*.cache/           # Cache-ul de proiect
+*.hw/              # Hardware dashboard data
+*.sim/             # Rezultatele simulărilor
+*.ip_user_files/   # Fișiere generate pentru IP-uri
+*.gen/             # Surse generate automat

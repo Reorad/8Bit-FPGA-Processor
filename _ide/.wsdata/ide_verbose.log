@@ -1,0 +1,447 @@
+2026-04-28 18:09:00 [debug] : --------------------------------------------------------------------------------- 
+2026-04-28 18:09:00 [debug] : D:\Facultate\Proiect_DSD\A5_Procesor 
+2026-04-28 18:09:00 [debug] : --------------------------------------------------------------------------------- 
+2026-04-28 18:09:00 [debug] : [Logger] Previous user logs are stored in the file - C:\Users\sebis\.Xilinx\Vitis\2025.2\logs\ide.log 
+2026-04-28 18:09:00 [debug] : [Logger] Previous debug logs are stored in the file - C:\Users\sebis\.Xilinx\Vitis\2025.2\.wsdata\ide_verbose.log 
+2026-04-28 18:09:00 [debug] : [Application Examples Provider]  updating the embedded templates on workspace event. 
+2026-04-28 18:09:00 [debug] : [Repository Server] Executing method:getEmbeddedExampleTemplateTree with connection:(object). {"0":"request:","1":{"wrappers_":null,"arrayIndexOffset_":-1,"array":[],"pivot_":1.7976931348623157e+308,"convertedPrimitiveFields_":{}}}
+2026-04-28 18:09:00 [debug] : [Application Examples Provider] refresh requested. 
+2026-04-28 18:09:00 [debug] : Received event from notification service: ON_DID_UPDATE_WORKSPACE. 
+2026-04-28 18:09:00 [debug] : [Logger Client] log levelchanged to  {"0":"Info"}
+2026-04-28 18:09:00 [debug] : [Logger UI]  Update Log Level  called 
+2026-04-28 18:09:00 [debug] : [Application Examples Provider] common calling method requested. 
+2026-04-28 18:09:00 [debug] : [Application Examples Provider] Repositories model update requested. 
+2026-04-28 18:09:00 [debug] : [Application Examples Provider] Repositories model update completed. 
+2026-04-28 18:09:00 [debug] : [ProjectCache] fetching projects for project-cache 
+2026-04-28 18:09:00 [debug] : [Application Examples Provider] Templates model update requested. 
+2026-04-28 18:09:00 [debug] : [Repository Service] Executing method:getEmbeddedExampleTemplateTree from frontend. {"0":"request:"}
+2026-04-28 18:09:00 [debug] : [Application Examples Provider] Templates model update completed. 
+2026-04-28 18:09:00 [debug] : [Application Examples Provider] common calling method completed. 
+2026-04-28 18:09:00 [debug] : [Application Examples Provider] refresh completed. 
+2026-04-28 18:09:00 [debug] : RIGEL SERVER 18:09:00 INFO  : Marking the target connection as default Local 
+2026-04-28 18:09:00 [debug] : [Logger UI]  Update Log Level success {"0":{"success":true,"error":""}}
+2026-04-28 18:09:00 [debug] : RIGEL SERVER 18:09:00 INFO  : Marking the target connection as default Linux Agent 
+2026-04-28 18:09:00 [debug] : RIGEL SERVER 18:09:00 INFO  : Marking the target connection as default XRTServer 
+2026-04-28 18:09:00 [debug] : RIGEL SERVER 18:09:00 INFO  : Marking the target connection as default LinuxEmulation 
+2026-04-28 18:09:00 [debug] : RIGEL SERVER 18:09:00 INFO  : Marking the target connection as default QEMU 
+2026-04-28 18:09:00 [debug] : RIGEL SERVER 18:09:00 INFO  : updated workspace path: D:\Facultate\Proiect_DSD\A5_Procesor 
+2026-04-28 18:09:00 [debug] : Event posted using notification server in backend. {"0":{"wrappers_":{},"arrayIndexOffset_":-1,"array":["dec4acf3-425e-4ff9-9d94-e89f9b56dda1",null,54,null,null,null,null,"refresh-summaries"],"pivot_":1.7976931348623157e+308,"convertedPrimitiveFields_":{}}}
+2026-04-28 18:09:00 [debug] : Received event from notification service: ON_DID_REFRESH_WORKSPACE_SUMMARIES. 
+2026-04-28 18:09:00 [debug] : Received event from notification service: ON_STOP_ANALYSIS_PROGRESS. 
+2026-04-28 18:09:00 [debug] : [ProjectDecorator] tree decoration updated 
+2026-04-28 18:09:00 [debug] : [ProjectCache] Project location updated to undefined 
+2026-04-28 18:09:00 [debug] : [ProjectDecorator] tree decoration updated 
+2026-04-28 18:09:00 [debug] : MonacoEditorModel.fireDidChangeContent - enter - {
+  "changes": [
+    {
+      "range": {
+        "startLineNumber": 1,
+        "startColumn": 1,
+        "endLineNumber": 1,
+        "endColumn": 1
+      },
+      "rangeLength": 0,
+      "text": "{\r\n    \"clangd.fallbackFlags\": []\r\n}",
+      "rangeOffset": 0,
+      "forceMoveMarkers": false
+    }
+  ],
+  "eol": "\r\n",
+  "isEolChange": false,
+  "versionId": 2,
+  "isUndoing": false,
+  "isRedoing": false,
+  "isFlush": false
+} {"0":"file:///d:/Facultate/Proiect_DSD/A5_Procesor/_ide/settings.json"}
+2026-04-28 18:09:00 [debug] : MonacoEditorModel.markAsDirty - enter {"0":"file:///d:/Facultate/Proiect_DSD/A5_Procesor/_ide/settings.json"}
+2026-04-28 18:09:00 [debug] : MonacoEditorModel.cancelSync {"0":"file:///d:/Facultate/Proiect_DSD/A5_Procesor/_ide/settings.json"}
+2026-04-28 18:09:00 [debug] : MonacoEditorModel.markAsDirty - exit {"0":"file:///d:/Facultate/Proiect_DSD/A5_Procesor/_ide/settings.json"}
+2026-04-28 18:09:00 [debug] : MonacoEditorModel.fireDidChangeContent - exit {"0":"file:///d:/Facultate/Proiect_DSD/A5_Procesor/_ide/settings.json"}
+2026-04-28 18:09:00 [debug] : MonacoEditorModel.cancelSave {"0":"file:///d:/Facultate/Proiect_DSD/A5_Procesor/_ide/settings.json"}
+2026-04-28 18:09:00 [debug] : MonacoEditorModel.cancelSave {"0":"file:///d:/Facultate/Proiect_DSD/A5_Procesor/_ide/settings.json"}
+2026-04-28 18:09:00 [debug] : MonacoEditorModel.cancelSync {"0":"file:///d:/Facultate/Proiect_DSD/A5_Procesor/_ide/settings.json"}
+2026-04-28 18:09:00 [debug] : MonacoEditorModel.cancelSave {"0":"file:///d:/Facultate/Proiect_DSD/A5_Procesor/_ide/settings.json"}
+2026-04-28 18:09:00 [debug] : No label for action menu node: No command "workspace:addFolder" exists. 
+2026-04-28 18:09:10 [debug] : start navigation 1 
+2026-04-28 18:09:10 [debug] : start navigation 2 
+2026-04-28 18:09:10 [debug] : end navigation 1 
+2026-04-28 18:09:10 [debug] : end navigation 0 
+2026-04-28 18:09:10 [debug] : ending navigation with location {"uri":"file:///d%3A/Facultate/Proiect_DSD/A5_Procesor/.gitignore","type":1,"context":{"start":{"line":0,"character":0},"end":{"line":0,"character":0}}} 
+2026-04-28 18:09:10 [debug] : start navigation 1 
+2026-04-28 18:09:10 [debug] : start navigation 2 
+2026-04-28 18:09:10 [debug] : start navigation 3 
+2026-04-28 18:09:10 [debug] : end navigation 2 
+2026-04-28 18:09:10 [debug] : end navigation 1 
+2026-04-28 18:09:10 [debug] : end navigation 0 
+2026-04-28 18:09:10 [debug] : ending navigation with location {"uri":"file:///d%3A/Facultate/Proiect_DSD/A5_Procesor/.gitignore","type":1,"context":{"start":{"line":0,"character":0},"end":{"line":0,"character":0}}} 
+2026-04-28 18:09:23 [debug] : start navigation 1 
+2026-04-28 18:09:23 [debug] : end navigation 0 
+2026-04-28 18:09:23 [debug] : ending navigation with location {"uri":"file:///d%3A/Facultate/Proiect_DSD/A5_Procesor/.gitignore","type":0,"context":{"line":16,"character":4}} 
+2026-04-28 18:09:23 [debug] : TypeError: Cannot read properties of undefined (reading 'replace')
+    at ee.onActiveLinesChanged (D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\plugins\eamodio-gitlens\extension\dist\gitlens.js:35:1404)
+    at Te.<computed> (D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\plugins\eamodio-gitlens\extension\dist\gitlens.js:209:4816)
+    at D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\lib\backend\69.js:2:126060
+    at s.invoke (D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\lib\backend\69.js:2:126149)
+    at a.fire (D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\lib\backend\69.js:2:127948)
+    at Ji.fireLinesChanged (D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\plugins\eamodio-gitlens\extension\dist\gitlens.js:39:6138)
+    at Ji.fireLinesChanged (D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\plugins\eamodio-gitlens\extension\dist\gitlens.js:39:8100)
+    at Ji.onLinesChanged (D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\plugins\eamodio-gitlens\extension\dist\gitlens.js:39:6753)
+    at Ji.trigger (D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\plugins\eamodio-gitlens\extension\dist\gitlens.js:39:6162)
+    at Ji.onTextEditorSelectionChanged (D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\plugins\eamodio-gitlens\extension\dist\gitlens.js:39:4322) 
+2026-04-28 18:09:28 [debug] : start navigation 1 
+2026-04-28 18:09:28 [debug] : start navigation 2 
+2026-04-28 18:09:28 [debug] : end navigation 1 
+2026-04-28 18:09:28 [debug] : end navigation 0 
+2026-04-28 18:09:28 [debug] : ending navigation with location {"uri":"file:///d%3A/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.xpr","type":1,"context":{"start":{"line":0,"character":0},"end":{"line":0,"character":0}}} 
+2026-04-28 18:10:05 [debug] : [ProjectCache] fetching projects for project-cache 
+2026-04-28 18:10:05 [debug] : [ProjectDecorator] tree decoration updated 
+2026-04-28 18:10:05 [debug] : [ProjectCache] Project location updated to undefined 
+2026-04-28 18:10:05 [debug] : [ProjectDecorator] tree decoration updated 
+2026-04-28 18:10:06 [debug] : [ProjectCache] fetching projects for project-cache 
+2026-04-28 18:10:06 [debug] : [ProjectDecorator] tree decoration updated 
+2026-04-28 18:10:06 [debug] : [ProjectCache] Project location updated to undefined 
+2026-04-28 18:10:06 [debug] : [ProjectDecorator] tree decoration updated 
+2026-04-28 18:11:43 [debug] : [ProjectCache] fetching projects for project-cache 
+2026-04-28 18:11:43 [debug] : [ProjectDecorator] tree decoration updated 
+2026-04-28 18:11:43 [debug] : [ProjectCache] Project location updated to undefined 
+2026-04-28 18:11:43 [debug] : [ProjectDecorator] tree decoration updated 
+2026-04-28 18:12:01 [debug] : MonacoEditorModel.fireDidChangeContent - enter - {
+  "changes": [
+    {
+      "range": {
+        "startLineNumber": 14,
+        "startColumn": 1,
+        "endLineNumber": 14,
+        "endColumn": 6
+      },
+      "rangeLength": 5,
+      "text": "    },\r\n    \"vitis.output.hideGitOutput\": false",
+      "rangeOffset": 429,
+      "forceMoveMarkers": false
+    }
+  ],
+  "eol": "\r\n",
+  "isEolChange": false,
+  "versionId": 2,
+  "isUndoing": false,
+  "isRedoing": false,
+  "isFlush": false
+} {"0":"user-storage:/user/settings.json"}
+2026-04-28 18:12:01 [debug] : MonacoEditorModel.markAsDirty - enter {"0":"user-storage:/user/settings.json"}
+2026-04-28 18:12:01 [debug] : MonacoEditorModel.cancelSync {"0":"user-storage:/user/settings.json"}
+2026-04-28 18:12:01 [debug] : MonacoEditorModel.markAsDirty - exit {"0":"user-storage:/user/settings.json"}
+2026-04-28 18:12:01 [debug] : MonacoEditorModel.fireDidChangeContent - exit {"0":"user-storage:/user/settings.json"}
+2026-04-28 18:12:01 [debug] : MonacoEditorModel.cancelSave {"0":"user-storage:/user/settings.json"}
+2026-04-28 18:12:01 [debug] : MonacoEditorModel.cancelSave {"0":"user-storage:/user/settings.json"}
+2026-04-28 18:12:01 [debug] : PLUGIN_HOST(34848): PluginManagerExtImpl/loadPlugin(D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\plugins\vitis-output-0.0.1\extension\lib\extension.js) 
+2026-04-28 18:12:01 [debug] : Calling activation function on plugin amd.vitis-output 
+2026-04-28 18:12:01 [debug] : MonacoEditorModel.cancelSync {"0":"user-storage:/user/settings.json"}
+2026-04-28 18:12:01 [debug] : MonacoEditorModel.cancelSave {"0":"user-storage:/user/settings.json"}
+2026-04-28 18:12:01 [debug] : No label for action menu node: No command "workspace:addFolder" exists. 
+2026-04-28 18:12:06 [debug] : start navigation 1 
+2026-04-28 18:12:06 [debug] : end navigation 0 
+2026-04-28 18:12:06 [debug] : ending navigation with location {"uri":"file:///d%3A/Facultate/Proiect_DSD/A5_Procesor/.gitignore","type":1,"context":{"start":{"line":16,"character":4},"end":{"line":16,"character":4}}} 
+2026-04-28 18:12:07 [debug] : start navigation 1 
+2026-04-28 18:12:07 [debug] : end navigation 0 
+2026-04-28 18:12:07 [debug] : ending navigation with location {"uri":"file:///d%3A/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.xpr","type":1,"context":{"start":{"line":0,"character":0},"end":{"line":0,"character":0}}} 
+2026-04-28 18:12:08 [debug] : start navigation 1 
+2026-04-28 18:12:08 [debug] : end navigation 0 
+2026-04-28 18:12:08 [debug] : ending navigation with location {"uri":"file:///d%3A/Facultate/Proiect_DSD/A5_Procesor/.gitignore","type":1,"context":{"start":{"line":0,"character":0},"end":{"line":0,"character":0}}} 
+2026-04-28 18:12:08 [debug] : MonacoEditorModel.cancelSync {"0":"file:///d:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.xpr"}
+2026-04-28 18:12:08 [debug] : MonacoEditorModel.cancelSave {"0":"file:///d:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.xpr"}
+2026-04-28 18:13:32 [debug] : [ProjectCache] fetching projects for project-cache 
+2026-04-28 18:13:32 [debug] : [ProjectDecorator] tree decoration updated 
+2026-04-28 18:13:32 [debug] : [ProjectCache] Project location updated to undefined 
+2026-04-28 18:13:32 [debug] : [ProjectDecorator] tree decoration updated 
+2026-04-28 18:13:35 [debug] : [ProjectCache] fetching projects for project-cache 
+2026-04-28 18:13:35 [debug] : [ProjectDecorator] tree decoration updated 
+2026-04-28 18:13:35 [debug] : [ProjectCache] Project location updated to undefined 
+2026-04-28 18:13:35 [debug] : [ProjectDecorator] tree decoration updated 
+2026-04-28 18:13:53 [debug] : [ProjectCache] fetching projects for project-cache 
+2026-04-28 18:13:53 [debug] : [ProjectDecorator] tree decoration updated 
+2026-04-28 18:13:53 [debug] : [ProjectCache] Project location updated to undefined 
+2026-04-28 18:13:53 [debug] : [ProjectDecorator] tree decoration updated 
+2026-04-28 18:24:35 [debug] : [ProjectCache] fetching projects for project-cache 
+2026-04-28 18:24:35 [debug] : [ProjectDecorator] tree decoration updated 
+2026-04-28 18:24:35 [debug] : [ProjectCache] Project location updated to undefined 
+2026-04-28 18:24:35 [debug] : [ProjectDecorator] tree decoration updated 
+2026-04-28 18:24:37 [debug] : [ProjectCache] fetching projects for project-cache 
+2026-04-28 18:24:37 [debug] : [ProjectDecorator] tree decoration updated 
+2026-04-28 18:24:37 [debug] : [ProjectCache] Project location updated to undefined 
+2026-04-28 18:24:37 [debug] : [ProjectDecorator] tree decoration updated 
+2026-04-28 18:24:51 [debug] : [ProjectCache] fetching projects for project-cache 
+2026-04-28 18:24:51 [debug] : [ProjectDecorator] tree decoration updated 
+2026-04-28 18:24:51 [debug] : [ProjectCache] Project location updated to undefined 
+2026-04-28 18:24:51 [debug] : [ProjectDecorator] tree decoration updated 
+2026-04-28 18:24:54 [debug] : MonacoEditorModel.fireDidChangeContent - enter - {
+  "changes": [
+    {
+      "range": {
+        "startLineNumber": 15,
+        "startColumn": 35,
+        "endLineNumber": 15,
+        "endColumn": 40
+      },
+      "rangeLength": 5,
+      "text": "false",
+      "rangeOffset": 471,
+      "forceMoveMarkers": false
+    }
+  ],
+  "eol": "\r\n",
+  "isEolChange": false,
+  "versionId": 2,
+  "isUndoing": false,
+  "isRedoing": false,
+  "isFlush": false
+} {"0":"user-storage:/user/settings.json"}
+2026-04-28 18:24:54 [debug] : MonacoEditorModel.markAsDirty - enter {"0":"user-storage:/user/settings.json"}
+2026-04-28 18:24:54 [debug] : MonacoEditorModel.cancelSync {"0":"user-storage:/user/settings.json"}
+2026-04-28 18:24:54 [debug] : MonacoEditorModel.markAsDirty - exit {"0":"user-storage:/user/settings.json"}
+2026-04-28 18:24:54 [debug] : MonacoEditorModel.fireDidChangeContent - exit {"0":"user-storage:/user/settings.json"}
+2026-04-28 18:24:54 [debug] : MonacoEditorModel.cancelSave {"0":"user-storage:/user/settings.json"}
+2026-04-28 18:24:54 [debug] : MonacoEditorModel.cancelSave {"0":"user-storage:/user/settings.json"}
+2026-04-28 18:24:54 [debug] : MonacoEditorModel.cancelSync {"0":"user-storage:/user/settings.json"}
+2026-04-28 18:24:54 [debug] : MonacoEditorModel.cancelSave {"0":"user-storage:/user/settings.json"}
+2026-04-28 18:30:24 [debug] : [ProjectCache] fetching projects for project-cache 
+2026-04-28 18:30:24 [debug] : [ProjectDecorator] tree decoration updated 
+2026-04-28 18:30:24 [debug] : [ProjectCache] Project location updated to undefined 
+2026-04-28 18:30:24 [debug] : [ProjectDecorator] tree decoration updated 
+2026-04-28 18:30:25 [debug] : [ProjectCache] fetching projects for project-cache 
+2026-04-28 18:30:25 [debug] : [ProjectDecorator] tree decoration updated 
+2026-04-28 18:30:25 [debug] : [ProjectCache] Project location updated to undefined 
+2026-04-28 18:30:25 [debug] : [ProjectDecorator] tree decoration updated 
+2026-04-28 18:30:45 [debug] : [ProjectCache] fetching projects for project-cache 
+2026-04-28 18:30:45 [debug] : [ProjectDecorator] tree decoration updated 
+2026-04-28 18:30:45 [debug] : [ProjectCache] Project location updated to undefined 
+2026-04-28 18:30:45 [debug] : [ProjectDecorator] tree decoration updated 
+2026-04-28 18:30:49 [debug] : MonacoEditorModel.fireDidChangeContent - enter - {
+  "changes": [
+    {
+      "range": {
+        "startLineNumber": 15,
+        "startColumn": 35,
+        "endLineNumber": 15,
+        "endColumn": 40
+      },
+      "rangeLength": 5,
+      "text": "false",
+      "rangeOffset": 471,
+      "forceMoveMarkers": false
+    }
+  ],
+  "eol": "\r\n",
+  "isEolChange": false,
+  "versionId": 2,
+  "isUndoing": false,
+  "isRedoing": false,
+  "isFlush": false
+} {"0":"user-storage:/user/settings.json"}
+2026-04-28 18:30:49 [debug] : MonacoEditorModel.markAsDirty - enter {"0":"user-storage:/user/settings.json"}
+2026-04-28 18:30:49 [debug] : MonacoEditorModel.cancelSync {"0":"user-storage:/user/settings.json"}
+2026-04-28 18:30:49 [debug] : MonacoEditorModel.markAsDirty - exit {"0":"user-storage:/user/settings.json"}
+2026-04-28 18:30:49 [debug] : MonacoEditorModel.fireDidChangeContent - exit {"0":"user-storage:/user/settings.json"}
+2026-04-28 18:30:49 [debug] : MonacoEditorModel.cancelSave {"0":"user-storage:/user/settings.json"}
+2026-04-28 18:30:49 [debug] : MonacoEditorModel.cancelSave {"0":"user-storage:/user/settings.json"}
+2026-04-28 18:30:49 [debug] : MonacoEditorModel.cancelSync {"0":"user-storage:/user/settings.json"}
+2026-04-28 18:30:49 [debug] : MonacoEditorModel.cancelSave {"0":"user-storage:/user/settings.json"}
+2026-04-28 18:31:04 [debug] : [ProjectCache] fetching projects for project-cache 
+2026-04-28 18:31:04 [debug] : [ProjectDecorator] tree decoration updated 
+2026-04-28 18:31:04 [debug] : [ProjectCache] Project location updated to undefined 
+2026-04-28 18:31:04 [debug] : [ProjectDecorator] tree decoration updated 
+2026-04-28 18:31:04 [debug] : [ProjectCache] fetching projects for project-cache 
+2026-04-28 18:31:04 [debug] : [ProjectDecorator] tree decoration updated 
+2026-04-28 18:31:04 [debug] : [ProjectCache] Project location updated to undefined 
+2026-04-28 18:31:04 [debug] : [ProjectDecorator] tree decoration updated 
+2026-04-28 18:31:24 [debug] : [ProjectCache] fetching projects for project-cache 
+2026-04-28 18:31:24 [debug] : [ProjectDecorator] tree decoration updated 
+2026-04-28 18:31:24 [debug] : [ProjectCache] Project location updated to undefined 
+2026-04-28 18:31:24 [debug] : [ProjectDecorator] tree decoration updated 
+2026-04-28 18:31:27 [debug] : [ProjectCache] fetching projects for project-cache 
+2026-04-28 18:31:27 [debug] : [ProjectDecorator] tree decoration updated 
+2026-04-28 18:31:27 [debug] : [ProjectCache] Project location updated to undefined 
+2026-04-28 18:31:27 [debug] : [ProjectDecorator] tree decoration updated 
+2026-04-28 18:31:46 [debug] : [ProjectCache] fetching projects for project-cache 
+2026-04-28 18:31:46 [debug] : [ProjectDecorator] tree decoration updated 
+2026-04-28 18:31:46 [debug] : [ProjectCache] Project location updated to undefined 
+2026-04-28 18:31:46 [debug] : [ProjectDecorator] tree decoration updated 
+2026-04-28 18:31:50 [debug] : start navigation 1 
+2026-04-28 18:31:50 [debug] : start navigation 2 
+2026-04-28 18:31:50 [debug] : end navigation 1 
+2026-04-28 18:31:50 [debug] : end navigation 0 
+2026-04-28 18:31:50 [debug] : ending navigation with location {"uri":"git-output:/git-error-1777390310001","type":1,"context":{"start":{"line":0,"character":0},"end":{"line":0,"character":0}}} 
+2026-04-28 18:32:26 [debug] : start navigation 1 
+2026-04-28 18:32:26 [debug] : end navigation 0 
+2026-04-28 18:32:26 [debug] : ending navigation with location {"uri":"file:///d%3A/Facultate/Proiect_DSD/A5_Procesor/.gitignore","type":1,"context":{"start":{"line":16,"character":4},"end":{"line":16,"character":4}}} 
+2026-04-28 18:32:27 [debug] : start navigation 1 
+2026-04-28 18:32:27 [debug] : end navigation 0 
+2026-04-28 18:32:27 [debug] : ending navigation with location {"uri":"file:///d%3A/Facultate/Proiect_DSD/A5_Procesor/.gitignore","type":0,"context":{"line":20,"character":12}} 
+2026-04-28 18:32:28 [debug] : start navigation 1 
+2026-04-28 18:32:28 [debug] : end navigation 0 
+2026-04-28 18:32:28 [debug] : ending navigation with location {"uri":"file:///d%3A/Facultate/Proiect_DSD/A5_Procesor/.gitignore","type":1,"context":{"start":{"line":0,"character":0},"end":{"line":20,"character":12}}} 
+2026-04-28 18:32:28 [debug] : TypeError: Cannot read properties of undefined (reading 'replace')
+    at ee.onActiveLinesChanged (D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\plugins\eamodio-gitlens\extension\dist\gitlens.js:35:1404)
+    at Te.<computed> (D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\plugins\eamodio-gitlens\extension\dist\gitlens.js:209:4816)
+    at D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\lib\backend\69.js:2:126060
+    at s.invoke (D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\lib\backend\69.js:2:126149)
+    at a.fire (D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\lib\backend\69.js:2:127948)
+    at Ji.fireLinesChanged (D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\plugins\eamodio-gitlens\extension\dist\gitlens.js:39:6138)
+    at Ji.fireLinesChanged (D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\plugins\eamodio-gitlens\extension\dist\gitlens.js:39:8100)
+    at Ji.onLinesChanged (D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\plugins\eamodio-gitlens\extension\dist\gitlens.js:39:6753)
+    at Ji.trigger (D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\plugins\eamodio-gitlens\extension\dist\gitlens.js:39:6162)
+    at Ji.onTextEditorSelectionChanged (D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\plugins\eamodio-gitlens\extension\dist\gitlens.js:39:4322) 
+2026-04-28 18:32:29 [debug] : start navigation 1 
+2026-04-28 18:32:29 [debug] : end navigation 0 
+2026-04-28 18:32:29 [debug] : ending navigation with location {"uri":"file:///d%3A/Facultate/Proiect_DSD/A5_Procesor/.gitignore","type":0,"context":{"line":15,"character":4}} 
+2026-04-28 18:32:29 [debug] : TypeError: Cannot read properties of undefined (reading 'replace')
+    at ee.onActiveLinesChanged (D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\plugins\eamodio-gitlens\extension\dist\gitlens.js:35:1404)
+    at Te.<computed> (D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\plugins\eamodio-gitlens\extension\dist\gitlens.js:209:4816)
+    at D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\lib\backend\69.js:2:126060
+    at s.invoke (D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\lib\backend\69.js:2:126149)
+    at a.fire (D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\lib\backend\69.js:2:127948)
+    at Ji.fireLinesChanged (D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\plugins\eamodio-gitlens\extension\dist\gitlens.js:39:6138)
+    at Ji.fireLinesChanged (D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\plugins\eamodio-gitlens\extension\dist\gitlens.js:39:8100)
+    at Ji.onLinesChanged (D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\plugins\eamodio-gitlens\extension\dist\gitlens.js:39:6753)
+    at Ji.trigger (D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\plugins\eamodio-gitlens\extension\dist\gitlens.js:39:6162)
+    at Ji.onTextEditorSelectionChanged (D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\plugins\eamodio-gitlens\extension\dist\gitlens.js:39:4322) 
+2026-04-28 18:32:33 [debug] : start navigation 1 
+2026-04-28 18:32:33 [debug] : end navigation 0 
+2026-04-28 18:32:33 [debug] : ending navigation with location {"uri":"file:///d%3A/Facultate/Proiect_DSD/A5_Procesor/.gitignore","type":0,"context":{"line":9,"character":5}} 
+2026-04-28 18:32:33 [debug] : TypeError: Cannot read properties of undefined (reading 'replace')
+    at ee.onActiveLinesChanged (D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\plugins\eamodio-gitlens\extension\dist\gitlens.js:35:1404)
+    at Te.<computed> (D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\plugins\eamodio-gitlens\extension\dist\gitlens.js:209:4816)
+    at D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\lib\backend\69.js:2:126060
+    at s.invoke (D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\lib\backend\69.js:2:126149)
+    at a.fire (D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\lib\backend\69.js:2:127948)
+    at Ji.fireLinesChanged (D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\plugins\eamodio-gitlens\extension\dist\gitlens.js:39:6138)
+    at Ji.fireLinesChanged (D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\plugins\eamodio-gitlens\extension\dist\gitlens.js:39:8100)
+    at Ji.onLinesChanged (D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\plugins\eamodio-gitlens\extension\dist\gitlens.js:39:6753)
+    at Ji.trigger (D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\plugins\eamodio-gitlens\extension\dist\gitlens.js:39:6162)
+    at Ji.onTextEditorSelectionChanged (D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\plugins\eamodio-gitlens\extension\dist\gitlens.js:39:4322) 
+2026-04-28 18:32:34 [debug] : start navigation 1 
+2026-04-28 18:32:34 [debug] : end navigation 0 
+2026-04-28 18:32:34 [debug] : ending navigation with location {"uri":"file:///d%3A/Facultate/Proiect_DSD/A5_Procesor/.gitignore","type":1,"context":{"start":{"line":0,"character":0},"end":{"line":20,"character":12}}} 
+2026-04-28 18:32:34 [debug] : TypeError: Cannot read properties of undefined (reading 'replace')
+    at ee.onActiveLinesChanged (D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\plugins\eamodio-gitlens\extension\dist\gitlens.js:35:1404)
+    at Te.<computed> (D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\plugins\eamodio-gitlens\extension\dist\gitlens.js:209:4816)
+    at D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\lib\backend\69.js:2:126060
+    at s.invoke (D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\lib\backend\69.js:2:126149)
+    at a.fire (D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\lib\backend\69.js:2:127948)
+    at Ji.fireLinesChanged (D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\plugins\eamodio-gitlens\extension\dist\gitlens.js:39:6138)
+    at Ji.fireLinesChanged (D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\plugins\eamodio-gitlens\extension\dist\gitlens.js:39:8100)
+    at Ji.onLinesChanged (D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\plugins\eamodio-gitlens\extension\dist\gitlens.js:39:6753)
+    at Ji.trigger (D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\plugins\eamodio-gitlens\extension\dist\gitlens.js:39:6162)
+    at Ji.onTextEditorSelectionChanged (D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\plugins\eamodio-gitlens\extension\dist\gitlens.js:39:4322) 
+2026-04-28 18:35:19 [debug] : socket closed 
+2026-04-28 18:35:19 [debug] : closing connection for 1 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/localization-server'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/os'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/commands'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/logger'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/messageService'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/rigel-utils'. 
+2026-04-28 18:35:19 [debug] : [Rigel Utils Server] Disposing objects in backend. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/ChannelCloseService'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/remote-filesystem'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/envs'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/startup-workspace'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/rigel-workspace'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/workspace'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/keyboard'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/stopwatch'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/application'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/i18n'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/quickInput'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/project'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/component'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/feature-registry'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/debugger'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/debug'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/shell-terminal'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/quickPick'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/task'. 
+2026-04-28 18:35:19 [debug] : a client has disconnected - removed from list: 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/search'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/hostedPlugin'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/plugin-ext'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/plugin-paths'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/vsx-environment'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/request-service'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/cli-preferences'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/server'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/repository'. 
+2026-04-28 18:35:19 [debug] : [Repository Server] Disposing objects in backend. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/program_flash'. 
+2026-04-28 18:35:19 [debug] : [Program Flash Server] Disposing objects in backend. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/build'. 
+2026-04-28 18:35:19 [debug] : [Build Server] Disposing objects in backend. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/notification'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path 'services/rigel-backend-helper'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/aie'. 
+2026-04-28 18:35:19 [debug] : [AIE Server] Disposing objects in backend. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/analysis'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/recent-summaries'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/rigel_explorer'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/linker-script'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/rigel-logger'. 
+2026-04-28 18:35:19 [debug] : [Logger Server] Disposing objects in backend. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/platform'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/vitis-hls'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/device'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/mini-browser-service'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/flow_navigator'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/hls/common/data/info'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/hls/common/file/service'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/hls/report'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/hls/dataflow/info'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/hls/l1library/service'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/hls/directive'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/hls_flow'. 
+2026-04-28 18:35:19 [debug] : [Hls Flow Server] Disposing objects in backend. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/search-in-workspace'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/open-ai/language-model-manager'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/mcpservermanager'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/languageModelRegistryDelegatePath'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/languageModelDelegatePath'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/rigel-ai/language-model-manager'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/anthropic/language-model-manager'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/google/language-model-manager'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/huggingface/language-model-manager'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/llamafilemanager'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/ollama/language-model-manager'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/vercel-ai/language-model-manager'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/config-file'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/elf-reader'. 
+2026-04-28 18:35:19 [debug] : [Elf Reader Server] Disposing objects in backend. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/project-utils'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/bootgen'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/cdo-utils'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/report-model'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/hls/wave/open'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/scanoss/service'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/hls-config'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/keyStore'. 
+2026-04-28 18:35:19 [debug] : Closing channel on service path '/services/languagePackService'. 
+2026-04-28 18:35:19 [debug] : Uncaught Exception:  {"0":"Error: spawn wmic.exe ENOENT"}
+2026-04-28 18:35:19 [debug] : Error: spawn wmic.exe ENOENT
+    at ChildProcess._handle.onexit (node:internal/child_process:286:19)
+    at onErrorNT (node:internal/child_process:484:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) 
+2026-04-28 18:35:19 [debug] : Uncaught Exception:  {"0":"TypeError: Cannot read properties of undefined (reading 'forEach')"}
+2026-04-28 18:35:19 [debug] : TypeError: Cannot read properties of undefined (reading 'forEach')
+    at Stream.<anonymous> (D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\lib\backend\384.js:2:4071231)
+    at Stream.emit (node:events:519:28)
+    at Stream.s (D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\lib\backend\384.js:2:1543096)
+    at Stream.emit (node:events:531:35)
+    at I (D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\lib\backend\384.js:2:4299347)
+    at i.write (D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\lib\backend\384.js:2:4299702)
+    at Stream.ondata (node:internal/streams/legacy:21:31)
+    at Stream.emit (node:events:519:28)
+    at p (D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\lib\backend\384.js:2:5693470)
+    at u.queue.u.push (D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\lib\backend\384.js:2:5693687)
+    at u (D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\lib\backend\384.js:2:2128932)
+    at Stream.<anonymous> (D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\lib\backend\384.js:2:2129191)
+    at u.end (D:\Vivaldo\2025.2\Vitis\ide\electron-app\win64\resources\app\lib\backend\384.js:2:5693884)
+    at Socket.onend (node:internal/streams/readable:946:10)
+    at Object.onceWrapper (node:events:633:28)
+    at Socket.emit (node:events:531:35) 
