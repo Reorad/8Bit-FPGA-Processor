@@ -1,10 +1,14 @@
 # compile vhdl design source files
 vhdl xil_defaultlib  \
+"../../../../A5_Procesor.srcs/sources_1/new/ALU_8_BITS.vhd" \
 "../../../../A5_Procesor.srcs/sources_1/new/CP_Register.vhd" \
 "../../../../A5_Procesor.srcs/sources_1/new/CP_TOP_LEVEL.vhd" \
+"../../../../A5_Procesor.srcs/sources_1/new/Constant_Decider.vhd" \
 "../../../../A5_Procesor.srcs/sources_1/new/Memory_Instructions.vhd" \
+"../../../../A5_Procesor.srcs/sources_1/new/REGISTER_File.vhd" \
 "../../../../A5_Procesor.srcs/sources_1/new/ROM.vhd" \
-"../../../../A5_Procesor.srcs/sim_1/new/TEST_TOP_LEVEL.vhd" \
+"../../../../A5_Procesor.srcs/sources_1/new/TOP_LEVEL.vhd" \
+"../../../../A5_Procesor.srcs/sim_1/new/TEST_TOP_MODULE.vhd" \
 
 # Do not sort compile order
 nosort

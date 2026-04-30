@@ -12,7 +12,7 @@ entity REGISTER_File is
         Sx_add : in STD_LOGIC_VECTOR(3 downto 0);
         Sy_add : in STD_LOGIC_VECTOR(3 downto 0);
         CLK : in STD_LOGIC;
-        Write_data : in STD_LOGIC;
+        Write_in : in STD_LOGIC;
         Operation_from_ALU : in STD_LOGIC_VECTOR(7 downto 0);
         RST : in STD_LOGIC;
         

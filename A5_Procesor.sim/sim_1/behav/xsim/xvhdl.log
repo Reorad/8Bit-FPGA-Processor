@@ -1,2 +1,2 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Memory_Instructions.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'Memory_Instructions'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/ALU_8_BITS.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ALU_8_BITS'

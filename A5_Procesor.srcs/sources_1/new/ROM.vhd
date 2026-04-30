@@ -1,3 +1,4 @@
+
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
@@ -15,9 +16,9 @@ architecture Behavioral of rom is
 
     signal ROM_Mem : ROM_Type:=
     (
-        0 => "0000000000001111", -- just check ROTATION 
-        1 => "0001000000000000", -- AND so 001
-        2 => "0010000000000000", -- SUB so 010
+        0 => "0000000000001111", -- Load into s0 0001111
+        1 => "0000000011100000", -- LOAD into s0 1110000
+        2 => "0000001011000000", -- SUB into s1 1100000
         3 => "1000000100000000", -- jump back to start 
         others => "0000000000000000"
     );

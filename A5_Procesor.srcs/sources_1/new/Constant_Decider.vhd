@@ -22,6 +22,5 @@ end Constant_Decider;
 architecture Behavioral of Constant_Decider is
 
 begin
-
-
+    O <= KK when MSB_DECIDE ='0' else B;
 end Behavioral;

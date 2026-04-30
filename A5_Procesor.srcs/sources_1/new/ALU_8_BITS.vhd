@@ -10,7 +10,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity ALU_8_BITS is
     port( A : in STD_LOGIC_VECTOR(7 downto 0);
           B : in STD_LOGIC_VECTOR(7 downto 0);
-          ALU_SEL : in STD_LOGIC_VECTOR(3 downto 0);
+          ALU_SEL : in STD_LOGIC_VECTOR(2 downto 0);
           O : out STD_LOGIC_VECTOR(7 downto 0);
           C_flag_future : out STD_LOGIC;
           Z_flag_future : out STD_LOGIC;
@@ -24,7 +24,7 @@ end ALU_8_BITS;
 architecture Behavioral of ALU_8_BITS is
 
 begin  
-    process(ALU_SEL)
+    process(ALU_SEL,A,B,C_flag_past,Z_flag_past)
         begin
            case ALU_SEL is 
                 when "000" => -- LOAD --
