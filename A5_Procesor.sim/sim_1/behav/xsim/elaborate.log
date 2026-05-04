@@ -1,7 +1,7 @@
 Vivado Simulator v2025.2
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: D:/Vivaldo/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Test_Top_level_behav xil_defaultlib.Test_Top_level -log elaborate.log 
+Running: C:/AMDDesignTools/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot ALU_8_BITS_tb_behav xil_defaultlib.ALU_8_BITS_tb -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -13,14 +13,6 @@ Compiling package std.textio
 Compiling package ieee.std_logic_1164
 Compiling package ieee.std_logic_arith
 Compiling package ieee.std_logic_unsigned
-Compiling package ieee.numeric_std
-Compiling architecture behavioral of entity xil_defaultlib.CP_Register [cp_register_default]
-Compiling architecture behavioral of entity xil_defaultlib.rom [rom_default]
-Compiling architecture behavioral of entity xil_defaultlib.Memory_Instructions [memory_instructions_default]
-Compiling architecture structural of entity xil_defaultlib.CP_TOP_LEVEL [cp_top_level_default]
-Compiling architecture behavioral of entity xil_defaultlib.REGISTER_File [register_file_default]
-Compiling architecture behavioral of entity xil_defaultlib.Constant_Decider [constant_decider_default]
 Compiling architecture behavioral of entity xil_defaultlib.ALU_8_BITS [alu_8_bits_default]
-Compiling architecture structural of entity xil_defaultlib.TOP_LEVEL [top_level_default]
-Compiling architecture test of entity xil_defaultlib.test_top_level
-Built simulation snapshot Test_Top_level_behav
+Compiling architecture sim of entity xil_defaultlib.alu_8_bits_tb
+Built simulation snapshot ALU_8_BITS_tb_behav

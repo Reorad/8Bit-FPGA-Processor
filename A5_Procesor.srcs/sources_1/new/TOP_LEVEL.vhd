@@ -40,7 +40,7 @@ architecture Structural of TOP_LEVEL is
     port( A : in STD_LOGIC_VECTOR(7 downto 0);
           B : in STD_LOGIC_VECTOR(7 downto 0);
           ALU_SEL : in STD_LOGIC_VECTOR(2 downto 0);
-          O : out STD_LOGIC_VECTOR(7 downto 0);
+          ALU_out : out STD_LOGIC_VECTOR(7 downto 0);
           C_flag_future : out STD_LOGIC;
           Z_flag_future : out STD_LOGIC;
           WE : out STD_LOGIC;

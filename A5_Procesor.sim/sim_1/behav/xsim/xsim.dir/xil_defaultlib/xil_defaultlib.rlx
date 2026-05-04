@@ -2,12 +2,13 @@
 2020.2
 Nov 14 2025
 19:37:27
-D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sim_1/new/TEST_TOP_MODULE.vhd,1777563181,vhdl,,,,test_top_level,,,,,,,,
-D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/ALU_8_BITS.vhd,1777564244,vhdl,,,,alu_8_bits,,,,,,,,
-D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/CP_Register.vhd,1777020440,vhdl,,,,cp_register,,,,,,,,
-D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/CP_TOP_LEVEL.vhd,1777399126,vhdl,,,,cp_top_level,,,,,,,,
-D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Constant_Decider.vhd,1777563863,vhdl,,,,constant_decider,,,,,,,,
-D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Memory_Instructions.vhd,1777559732,vhdl,,,,memory_instructions,,,,,,,,
-D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/REGISTER_File.vhd,1777563590,vhdl,,,,register_file,,,,,,,,
-D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/ROM.vhd,1777563404,vhdl,,,,rom,,,,,,,,
-D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/TOP_LEVEL.vhd,1777563629,vhdl,,,,top_level,,,,,,,,
+C:/uniwork/DSD/A5_procesor/A5_Microprocessor/A5_Procesor.srcs/sim_1/new/TEST_TOP_MODULE.vhd,1777896136,vhdl,,,,test_top_level,,,,,,,,
+C:/uniwork/DSD/A5_procesor/A5_Microprocessor/A5_Procesor.srcs/sources_1/new/ALU_8_BITS.vhd,1777914967,vhdl,,,,alu_8_bits,,,,,,,,
+C:/uniwork/DSD/A5_procesor/A5_Microprocessor/A5_Procesor.srcs/sources_1/new/CP_Register.vhd,1777896136,vhdl,,,,cp_register,,,,,,,,
+C:/uniwork/DSD/A5_procesor/A5_Microprocessor/A5_Procesor.srcs/sources_1/new/CP_TOP_LEVEL.vhd,1777896136,vhdl,,,,cp_top_level,,,,,,,,
+C:/uniwork/DSD/A5_procesor/A5_Microprocessor/A5_Procesor.srcs/sources_1/new/Constant_Decider.vhd,1777896136,vhdl,,,,constant_decider,,,,,,,,
+C:/uniwork/DSD/A5_procesor/A5_Microprocessor/A5_Procesor.srcs/sources_1/new/Memory_Instructions.vhd,1777896136,vhdl,,,,memory_instructions,,,,,,,,
+C:/uniwork/DSD/A5_procesor/A5_Microprocessor/A5_Procesor.srcs/sources_1/new/REGISTER_File.vhd,1777896136,vhdl,,,,register_file,,,,,,,,
+C:/uniwork/DSD/A5_procesor/A5_Microprocessor/A5_Procesor.srcs/sources_1/new/ROM.vhd,1777896136,vhdl,,,,rom,,,,,,,,
+C:/uniwork/DSD/A5_procesor/A5_Microprocessor/A5_Procesor.srcs/sources_1/new/TEST_ALU_8_BITS.vhd,1777914967,vhdl,,,,alu_8_bits_tb,,,,,,,,
+C:/uniwork/DSD/A5_procesor/A5_Microprocessor/A5_Procesor.srcs/sources_1/new/TOP_LEVEL.vhd,1777896136,vhdl,,,,top_level,,,,,,,,
