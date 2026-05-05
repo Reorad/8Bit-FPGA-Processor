@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7k70tfbv676-1" LaunchTime="1777563306" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/ALU_8_BITS.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7k70tfbv676-1" LaunchTime="1777985776" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/ALU_8_BITS.dcp">
   <File Type="PA-TCL" Name="TOP_LEVEL.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="TOP_LEVEL_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="TOP_LEVEL_reports.tcl"/>
@@ -11,6 +11,13 @@
   <File Type="VDS-TIMING-PB" Name="TOP_LEVEL_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/TEST_ALU_8_BITS.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/ALU_8_BITS.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -30,6 +37,12 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/Constant_Decider.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Flags_Register.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>

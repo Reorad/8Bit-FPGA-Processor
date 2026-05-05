@@ -48,6 +48,9 @@ begin
         if (Op_Register_KK = '0') then
            
             ALU_Sel <= Memorie_in_instruction(14 downto 12); 
+            if(Memorie_in_instruction(15 downto 12) = "0000") then
+                Update_flags <= '0';
+            end if;
             
         else
             

@@ -122,8 +122,8 @@ begin
     PC : CP_TOP_LEVEL port map(
         CLK => CLK,
         RST => RST,
-        Zero_flag => Carry_flag,
-        Carry_flag => Zero_Flag, 
+        Zero_flag => Zero_flag,
+        Carry_flag => Carry_flag, 
         Rotation_flag=> rotation_flag_PC,
         Addres_out => Address_aux,
         Write_enable => Write_PC_REG, 

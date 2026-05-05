@@ -21,7 +21,9 @@ architecture Behavioral of rom is
         2 => "0000001011000000", -- Load into s2 1100000
         3 => "1100000010100010", -- ADD into s0 the value of s10
         4 => "0010000111111111", -- Add into s1 111111111
-        5 => "1000000100000000", -- jump back to start 
+        5 => "0000111100000000", -- Loads into register s15 0
+        6 => "0110111100000001", -- Substract s15 1 should trigger carry flag
+        7 => "1000000100000000", -- jump back to start 
         others => "0000000000000000"
     );
 

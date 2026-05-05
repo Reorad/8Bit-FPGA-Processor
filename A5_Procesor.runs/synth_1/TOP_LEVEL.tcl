@@ -66,7 +66,7 @@ set_param synth.vivado.isSynthRun true
 set_property webtalk.parent_dir D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.cache/wt [current_project]
 set_property parent.project_path D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
-set_property target_language Verilog [current_project]
+set_property target_language VHDL [current_project]
 set_property ip_output_repo d:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
@@ -76,6 +76,7 @@ read_vhdl -library xil_defaultlib {
   D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/CP_Register.vhd
   D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/CP_TOP_LEVEL.vhd
   D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Constant_Decider.vhd
+  D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Flags_Register.vhd
   D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Memory_Instructions.vhd
   D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/REGISTER_File.vhd
   D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/ROM.vhd
