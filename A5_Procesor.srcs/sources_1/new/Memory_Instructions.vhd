@@ -11,10 +11,11 @@ entity Memory_Instructions is
           Mux_B_decide : out STD_LOGIC;
           Rotation_Signal : out STD_LOGIC;
           Write_enable : out STD_LOGIC;
+          Update_flags : out STD_LOGIC;
           -- Flag from ALU -- 
           Zero_flag : in STD_LOGIC;
           Carry_flag : in STD_LOGIC;
-          -- Debug and used for selecting Mux -- 
+          -- Debug -- 
           Memorie_debug_instuction : out STD_LOGIC_VECTOR (15 downto 0)
           );
 end Memory_Instructions;
@@ -42,7 +43,7 @@ begin
         ALU_Sel <= (others => '0');
         Address_JUMP <= (others => '0');
         Memorie_debug_instuction <= Memorie_in_instruction;
-        
+        Update_flags <= '1';
       
         if (Op_Register_KK = '0') then
            
@@ -65,7 +66,7 @@ begin
                             Write_enable <= '0';
                             JUMP_SIG     <= '1';
                             Address_JUMP <= Memorie_in_instruction(7 downto 0);
-                        
+                            Update_flags <= '0';                        
                         when others =>
                             Write_enable <= '0';
                             JUMP_SIG <= '0';

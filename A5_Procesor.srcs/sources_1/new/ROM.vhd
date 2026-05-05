@@ -16,10 +16,12 @@ architecture Behavioral of rom is
 
     signal ROM_Mem : ROM_Type:=
     (
-        0 => "0000000000001111", -- Load into s0 0001111
-        1 => "0000000011100000", -- LOAD into s0 1110000
-        2 => "0000001011000000", -- SUB into s1 1100000
-        3 => "1000000100000000", -- jump back to start 
+        0 => "0000000000001111", -- Load into s0 0001111 , 15 
+        1 => "0000000011100000", -- LOAD into s0 1110000,  224
+        2 => "0000001011000000", -- Load into s2 1100000
+        3 => "1100000010100010", -- ADD into s0 the value of s10
+        4 => "0010000111111111", -- Add into s1 111111111
+        5 => "1000000100000000", -- jump back to start 
         others => "0000000000000000"
     );
 

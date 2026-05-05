@@ -1,2 +1,10 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/uniwork/DSD/A5_procesor/A5_Microprocessor/A5_Procesor.srcs/sources_1/new/TEST_ALU_8_BITS.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'ALU_8_BITS_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/ALU_8_BITS.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ALU_8_BITS'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/CP_TOP_LEVEL.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'CP_TOP_LEVEL'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Flags_Register.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Flags_Register'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Memory_Instructions.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Memory_Instructions'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/TOP_LEVEL.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'TOP_LEVEL'

@@ -21,7 +21,8 @@ entity CP_TOP_LEVEL is
           -- Signal for deciding using Constant or Register -- 
           Konstant : out STD_LOGIC;
           -- SIGNALS FOR ADD, SUB, MOV , JUMP , XOR , AND ... -- 
-          ALU_OUT : out STD_LOGIC_VECTOR(2 downto 0)
+          ALU_OUT : out STD_LOGIC_VECTOR(2 downto 0);
+          Update_flags : out STD_LOGIC
           );
 end CP_TOP_LEVEL;
 
@@ -55,6 +56,7 @@ architecture Structural of CP_TOP_LEVEL is
           Mux_B_decide : out STD_LOGIC;
           Rotation_Signal : out STD_LOGIC;
           Write_enable : out STD_LOGIC;
+          Update_flags : out STD_LOGIC;
           Zero_flag : in STD_LOGIC;
           Carry_flag : in STD_LOGIC;
           Memorie_debug_instuction : out STD_LOGIC_VECTOR (15 downto 0)
@@ -68,6 +70,7 @@ architecture Structural of CP_TOP_LEVEL is
     signal PC_INDEX_TO_ROM : STD_LOGIC_VECTOR(7 downto 0) :=(others=>'0');
     signal ROM_INSTRUCTION_ADD_DECODER : STD_LOGIC_VECTOR(15 downto 0) := (others=>'0');
     signal Address_out_aux : STD_LOGIC_VECTOR(15 downto 0) :=(others=>'0');
+    
 begin
     
         PC : CP_Register port map(
@@ -98,6 +101,7 @@ begin
                     Zero_flag => Zero_Flag,
                     Write_enable =>  Write_enable, 
                     Carry_Flag => Carry_Flag, 
+                    Update_flags => Update_flags, 
                     Address_JUMP => JUMP_ADDRESS_FROM_DECODER,
                     Memorie_debug_instuction => Addres_out
                     );

@@ -1,7 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  \
-"../../../../A5_Procesor.srcs/sources_1/new/ALU_8_BITS.vhd" \
-"../../../../A5_Procesor.srcs/sources_1/new/TEST_ALU_8_BITS.vhd" \
-
-# Do not sort compile order
-nosort

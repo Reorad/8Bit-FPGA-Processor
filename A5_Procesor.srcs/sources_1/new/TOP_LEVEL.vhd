@@ -40,10 +40,9 @@ architecture Structural of TOP_LEVEL is
     port( A : in STD_LOGIC_VECTOR(7 downto 0);
           B : in STD_LOGIC_VECTOR(7 downto 0);
           ALU_SEL : in STD_LOGIC_VECTOR(2 downto 0);
-          ALU_out : out STD_LOGIC_VECTOR(7 downto 0);
+          O : out STD_LOGIC_VECTOR(7 downto 0);
           C_flag_future : out STD_LOGIC;
           Z_flag_future : out STD_LOGIC;
-          WE : out STD_LOGIC;
           C_flag_past : in STD_LOGIC;
           Z_flag_past : in STD_LOGIC
           );
@@ -64,7 +63,8 @@ architecture Structural of TOP_LEVEL is
           -- Signal for deciding using Constant or Register -- 
           Konstant : out STD_LOGIC;
           -- SIGNALS FOR ADD, SUB, MOV , JUMP , XOR , AND ... -- 
-          ALU_OUT : out STD_LOGIC_VECTOR(2 downto 0)
+          ALU_OUT : out STD_LOGIC_VECTOR(2 downto 0);
+          Update_flags : out STD_LOGIC
           );
     end component;
     
@@ -76,6 +76,18 @@ architecture Structural of TOP_LEVEL is
           );
     end component;
     
+    component Flags_Register is
+    port(
+        CLK : in STD_LOGIC;
+        RST : in STD_LOGIC;
+        Flag_C_ALU : in STD_LOGIC;
+        Flag_Z_ALU : in STD_LOGIC;
+        Update_flag_signal_PC : in STD_LOGIC;
+        Z_flag : out STD_LOGIC;
+        C_flag : out STD_LOGIC
+        );
+    end component;
+    
     
     -- Interanl signals for PC top level -- 
     signal rotation_flag_PC : STD_LOGIC :='0';
@@ -83,8 +95,12 @@ architecture Structural of TOP_LEVEL is
     signal ALU_SEL_PC : STD_LOGIC_VECTOR(2 downto 0) :=(others=>'0');
     signal Write_PC_REG : STD_LOGIC :='0';
     signal Konstant_B : STD_LOGIC_VECTOR(7 downto 0) :=(others=>'0');
-    signal C_into_ALU : STD_LOGIC :='0';
-    signal Z_into_ALU : STD_LOGIC :='0';
+    signal Update_flags_PC : STD_LOGIC := '0';
+    
+    -- Flags register signals -- 
+    signal Carry_Flag : STD_LOGIC;
+    signal Zero_Flag : STD_LOGIC;
+    
     -- Mux decide konstant or B -- 
     signal B_final : STD_LOGIC_VECTOR(7 downto 0) :=(others =>'0');
     signal Add_KK : STD_LOGIC_VECTOR(7 downto 0) := (others=>'0');
@@ -106,13 +122,14 @@ begin
     PC : CP_TOP_LEVEL port map(
         CLK => CLK,
         RST => RST,
-        Zero_flag => C_flag_output_ALU,
-        Carry_flag => Z_flag_output_ALU, 
+        Zero_flag => Carry_flag,
+        Carry_flag => Zero_Flag, 
         Rotation_flag=> rotation_flag_PC,
         Addres_out => Address_aux,
         Write_enable => Write_PC_REG, 
         Konstant => Konstant_from_PC,
-        ALU_out => ALU_SEL_PC
+        ALU_out => ALU_SEL_PC,
+        Update_flags=> Update_flags_PC
     );
     
     Adress_debug <= Address_aux;
@@ -146,9 +163,18 @@ begin
         O => Output_ALU ,
         C_flag_future => C_flag_output_ALU,
         Z_flag_future => Z_flag_output_ALU,
-        WE => Write_enable,
-        C_flag_past => C_into_ALU,
-        Z_flag_past => Z_into_ALU
+        C_flag_past => Carry_Flag,
+        Z_flag_past => Zero_Flag
+    );
+    
+    Flag_register : Flags_Register port map(
+        CLK => CLK,
+        RST => RST,
+        Flag_C_ALU => C_flag_output_ALU, -- enter Carry -- 
+        Flag_Z_ALU => Z_flag_output_ALU, -- enter Zero --
+        Update_flag_signal_PC => Update_flags_PC,
+        Z_flag => Zero_Flag, -- exits Carry --
+        C_flag => Carry_Flag -- exits Zero --
     );
     
     Operation_out<=Output_ALU;
