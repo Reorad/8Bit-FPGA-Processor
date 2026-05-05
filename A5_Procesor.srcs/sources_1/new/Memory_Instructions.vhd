@@ -22,10 +22,12 @@ end Memory_Instructions;
 
 architecture Behavioral of Memory_Instructions is
     
-    signal Op_Register_KK       : STD_LOGIC; 
+    signal Op_Register_KK : STD_LOGIC; 
     signal Operation_code_first : STD_LOGIC_VECTOR(3 downto 0);
-    signal Type_conditional     : STD_LOGIC_VECTOR(2 downto 0);
-    signal Flow_add             : STD_LOGIC_VECTOR(4 downto 0); 
+    signal Type_conditional : STD_LOGIC_VECTOR(2 downto 0);
+    signal Flow_add : STD_LOGIC_VECTOR(4 downto 0); 
+    signal Conditional_type : STD_LOGIC;
+    signal Conditions_flags : STD_LOGIC_VECTOR(1 downto 0);
     
 begin
 
@@ -35,7 +37,8 @@ begin
     Type_conditional <= Memorie_in_instruction(12 downto 10);
     Mux_B_decide <= Memorie_in_instruction(15);
     Rotation_Signal <='0' ;
-    
+    Conditional_type <= Memorie_in_instruction(12);
+    Conditions_flags <= Memorie_in_instruction(11 downto 10);
     process (Memorie_in_instruction, Op_Register_KK, Operation_code_first, Flow_add)
     begin 
         Write_enable <= '1';
@@ -53,28 +56,71 @@ begin
             end if;
             
         else
-            
             case Operation_code_first is
-                
+            
                 when "1100" => 
                     ALU_Sel <= Memorie_in_instruction(2 downto 0);
-                    
-                when "1101" | "1010" | "1011" | "1110" | "1111" =>
+                when "1101" =>  
                     Memorie_debug_instuction <= "0000000000001111";
                     Rotation_Signal <= '1';
-                when others =>
-                   
+                when "1010" => -- Input constant  
+                        
+                when "1011" => -- Input Sx, (Sy) 
+                
+                when "1110" => -- Output Sx, KK
+                
+                when "1111" => -- Output Sx ,(Sy) 
+                
+                when others => -- Here will be JUMP , 
+                    JUMP_SIG<='0'; 
+                    Write_enable <='0'; 
+                    Update_flags<='0';
                     case Flow_add is
                         when "10001" =>
-                            Write_enable <= '0';
-                            JUMP_SIG     <= '1';
-                            Address_JUMP <= Memorie_in_instruction(7 downto 0);
-                            Update_flags <= '0';                        
-                        when others =>
-                            Write_enable <= '0';
-                            JUMP_SIG <= '0';
-                    end case;
-                    
+                            -- We consider jump 
+                            Address_JUMP <= Memorie_in_instruction(7 downto 0); 
+                            if( Conditional_type = '0') then -- Dont care abt condition --
+                                JUMP_SIG<='1';    
+                            else
+                                case Conditions_flags is -- Care about condition -- 
+                                        when "00" => -- Is zero
+                                            if(Zero_flag = '1' ) then
+                                               JUMP_SIG<='1'; 
+                                            end if;
+                                        when "01" => -- Not zero 
+                                            if(Zero_flag = '0' ) then
+                                               JUMP_SIG<='1';  
+                                            end if;
+                                         when "10" => -- IS Carry
+                                            if(Carry_flag = '1' ) then
+                                               JUMP_SIG<='1';  
+                                            end if;
+                                         when "11" => -- Not Carry 
+                                            if(Carry_flag = '0' ) then
+                                               JUMP_SIG<='1'; 
+                                             end if;
+                                          when others => -- nothing happends -- 
+                                   end case; 
+                                end if;
+                            when "10011" => -- Call --
+                            
+                            when "10000" => -- Return --
+                                                     
+                            when others => -- Here will be interupts and other --
+                                
+                                case Memorie_in_instruction is
+                                      when "1000000000110000"=> --  Interupt Enable -- 
+                                      
+                                      when "1000000000010000" => -- Interupt disable -- 
+                                      
+                                      when "1000000011110000" => -- Returni Enable-- 
+                                      
+                                      when "1000000011010000" => -- Returni Disable
+                                      
+                                      when others => -- DONE --
+                                      
+                                end case; 
+                    end case;                    
             end case;
         end if;
     end process;

@@ -16,15 +16,28 @@ architecture Behavioral of rom is
 
     signal ROM_Mem : ROM_Type:=
     (
-        0 => "0000000000001111", -- Load into s0 0001111 , 15 
-        1 => "0000000011100000", -- LOAD into s0 1110000,  224
-        2 => "0000001011000000", -- Load into s2 1100000
-        3 => "1100000010100010", -- ADD into s0 the value of s10
-        4 => "0010000111111111", -- Add into s1 111111111
-        5 => "0000111100000000", -- Loads into register s15 0
-        6 => "0110111100000001", -- Substract s15 1 should trigger carry flag
-        7 => "1000000100000000", -- jump back to start 
-        others => "0000000000000000"
+        0 => "0000" & "0000" & "00000001",  -- Load into s0 0
+    
+        1 => "0000" & "0001" & "00000001", -- Load into s1 0
+        
+        2 => "0000" & "0010" & "00000000", -- SUM will be s2 
+        
+        3 => "0000" & "1010" & "00000111", -- S10 will be Counter 7 + 2 9th fibonacii
+        
+        4 => "1100" & "0010" & "0000" & "0000", -- Adding into sum s0 
+        
+        5 => "1100" & "0010" & "0001" & "0100", -- Adding into sum s1
+        
+        6 => "1100" & "0000" & "0001" & "0000", -- Load into s0 , s1 
+        
+        7 => "1100" & "0001" & "0010" & "0000", -- Load into s1 , sum (s2)
+        
+        8 => "0110" & "1010" & "00000001", -- Sub from counter 
+        
+        9 => "100" & '1' & "01" & "01" & "00000100",  -- JUMP NZ, addr 4
+        
+        10 => "100" & '0' & "00" & "01" & "00000000",  -- JUMP, addr 0
+            others => "0000000000000000"
     );
 
 begin

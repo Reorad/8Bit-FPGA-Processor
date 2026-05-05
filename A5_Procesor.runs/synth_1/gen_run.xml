@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7k70tfbv676-1" LaunchTime="1777985776" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/ALU_8_BITS.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7k70tfbv676-1" LaunchTime="1778008577" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/ALU_8_BITS.dcp">
   <File Type="PA-TCL" Name="TOP_LEVEL.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="TOP_LEVEL_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="TOP_LEVEL_reports.tcl"/>
   <File Type="RDS-RDS" Name="TOP_LEVEL.vds"/>
+  <File Type="RDS-PROPCONSTRS" Name="TOP_LEVEL_drc_synth.rpt"/>
   <File Type="RDS-UTIL" Name="TOP_LEVEL_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="TOP_LEVEL_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="TOP_LEVEL.dcp"/>
