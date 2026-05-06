@@ -3,12 +3,12 @@
 Nov 14 2025
 19:37:27
 D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sim_1/new/TEST_TOP_MODULE.vhd,1777567202,vhdl,,,,test_top_level,,,,,,,,
-D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/ALU_8_BITS.vhd,1777982631,vhdl,,,,alu_8_bits,,,,,,,,
+D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/ALU_8_BITS.vhd,1778072116,vhdl,,,,alu_8_bits,,,,,,,,
 D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/CP_Register.vhd,1777020440,vhdl,,,,cp_register,,,,,,,,
-D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/CP_TOP_LEVEL.vhd,1777983114,vhdl,,,,cp_top_level,,,,,,,,
+D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/CP_TOP_LEVEL.vhd,1778072116,vhdl,,,,cp_top_level,,,,,,,,
 D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Constant_Decider.vhd,1777567202,vhdl,,,,constant_decider,,,,,,,,
-D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Flags_Register.vhd,1777982059,vhdl,,,,flags_register,,,,,,,,
-D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Memory_Instructions.vhd,1778000383,vhdl,,,,memory_instructions,,,,,,,,
+D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Flags_Register.vhd,1778072116,vhdl,,,,flags_register,,,,,,,,
+D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Memory_Instructions.vhd,1778072116,vhdl,,,,memory_instructions,,,,,,,,
 D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/REGISTER_File.vhd,1777567202,vhdl,,,,register_file,,,,,,,,
-D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/ROM.vhd,1778003326,vhdl,,,,rom,,,,,,,,
-D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/TOP_LEVEL.vhd,1777984679,vhdl,,,,top_level,,,,,,,,
+D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/ROM.vhd,1778072116,vhdl,,,,rom,,,,,,,,
+D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/TOP_LEVEL.vhd,1778072116,vhdl,,,,top_level,,,,,,,,
