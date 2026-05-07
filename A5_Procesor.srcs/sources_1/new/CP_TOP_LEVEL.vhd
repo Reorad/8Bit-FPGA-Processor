@@ -10,11 +10,15 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity CP_TOP_LEVEL is
     port( CLK : in STD_LOGIC;
           RST : in STD_LOGIC;
+          -- Interupts logic
+          Hold_From_Interupter : in STD_LOGIC;
           -- Flags from ALU -- 
           Zero_Flag : in STD_LOGIC;
           Carry_Flag : in STD_LOGIC;
           -- Rotation -- 
           Rotation_flag : out STD_LOGIC;
+          Interupt_flag_en : out STD_LOGIC;
+          Interupt_flag_off : out STD_LOGIC;
           Write_enable : out STD_LOGIC;
           -- Mostly used for Debuging -- 
           Addres_out : out STD_LOGIC_VECTOR(15 downto 0);
@@ -22,7 +26,7 @@ entity CP_TOP_LEVEL is
           Konstant : out STD_LOGIC;
           -- SIGNALS FOR ADD, SUB, MOV , JUMP , XOR , AND ... -- 
           ALU_OUT : out STD_LOGIC_VECTOR(2 downto 0);
-          Update_flags : out STD_LOGIC
+          Update_carry_zero : out STD_LOGIC
           );
 end CP_TOP_LEVEL;
 
@@ -32,6 +36,8 @@ architecture Structural of CP_TOP_LEVEL is
     port(   
         CLK : in STD_LOGIC;
         RESET : in STD_LOGIC;
+        -- Interupt signals -- 
+        PC_HOLD : in STD_LOGIC;
         COME_MEM_INS : in STD_LOGIC;
         COME_INS_ADD : in STD_LOGIC_VECTOR(7 downto 0);
         
@@ -48,6 +54,7 @@ architecture Structural of CP_TOP_LEVEL is
     end component; 
     
     
+    
     component Memory_Instructions is
     port( Memorie_in_instruction : in STD_LOGIC_VECTOR(15 downto 0);
           JUMP_SIG : out STD_LOGIC; 
@@ -56,12 +63,15 @@ architecture Structural of CP_TOP_LEVEL is
           Mux_B_decide : out STD_LOGIC;
           Rotation_Signal : out STD_LOGIC;
           Write_enable : out STD_LOGIC;
-          Update_flags : out STD_LOGIC;
+          Update_carry_zero : out STD_LOGIC;
+          Interupt_flag_en : out STD_LOGIC;
+          Interupt_flag_off : out STD_LOGIC;
           Zero_flag : in STD_LOGIC;
           Carry_flag : in STD_LOGIC;
           Memorie_debug_instuction : out STD_LOGIC_VECTOR (15 downto 0)
           );
     end component;
+    
     
     -- signals from ALU -- 
     
@@ -76,6 +86,7 @@ begin
         PC : CP_Register port map(
                 CLK=>CLK,
                 RESET => RST,
+                PC_HOLD => Hold_From_Interupter, 
                 COME_MEM_INS => JUMP_FROM_DECODER,
                 COME_INS_ADD => JUMP_ADDRESS_FROM_DECODER,
                 PC_OUT => PC_INDEX_TO_ROM
@@ -101,7 +112,9 @@ begin
                     Zero_flag => Zero_Flag,
                     Write_enable =>  Write_enable, 
                     Carry_Flag => Carry_Flag, 
-                    Update_flags => Update_flags, 
+                    Interupt_flag_en => Interupt_flag_en,
+                    Interupt_flag_off => Interupt_flag_off, 
+                    Update_carry_zero => Update_carry_zero, 
                     Address_JUMP => JUMP_ADDRESS_FROM_DECODER,
                     Memorie_debug_instuction => Addres_out
                     );

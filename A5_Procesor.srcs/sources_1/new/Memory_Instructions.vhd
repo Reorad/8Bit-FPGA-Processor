@@ -7,11 +7,14 @@ entity Memory_Instructions is
           JUMP_SIG : out STD_LOGIC; 
           ALU_Sel : out STD_LOGIC_VECTOR(2 downto 0);
           Address_JUMP : out STD_LOGIC_VECTOR(7 downto 0);
-          -- Helping stuff -- 
+         -- Flags mostly --
           Mux_B_decide : out STD_LOGIC;
           Rotation_Signal : out STD_LOGIC;
           Write_enable : out STD_LOGIC;
-          Update_flags : out STD_LOGIC;
+          Update_carry_zero : out STD_LOGIC;
+          -- Interupts flags --
+          Interupt_flag_en : out STD_LOGIC;
+          Interupt_flag_off : out STD_LOGIC;
           -- Flag from ALU -- 
           Zero_flag : in STD_LOGIC;
           Carry_flag : in STD_LOGIC;
@@ -28,7 +31,7 @@ architecture Behavioral of Memory_Instructions is
     signal Flow_add : STD_LOGIC_VECTOR(4 downto 0); 
     signal Conditional_type : STD_LOGIC;
     signal Conditions_flags : STD_LOGIC_VECTOR(1 downto 0);
-    
+    signal AJunge_in_ultmia_parte : STD_LOGIC ;
 begin
 
     Op_Register_KK <= Memorie_in_instruction(15);
@@ -43,16 +46,18 @@ begin
     begin 
         Write_enable <= '1';
         JUMP_SIG <= '0';
+        AJunge_in_ultmia_parte<='0';
         ALU_Sel <= (others => '0');
         Address_JUMP <= (others => '0');
         Memorie_debug_instuction <= Memorie_in_instruction;
-        Update_flags <= '1';
-      
+        Update_carry_zero <= '1';
+        Interupt_flag_en <= '0';
+        Interupt_flag_off <= '0';
         if (Op_Register_KK = '0') then
            
             ALU_Sel <= Memorie_in_instruction(14 downto 12); 
             if(Memorie_in_instruction(15 downto 12) = "0000") then
-                Update_flags <= '0';
+                Update_carry_zero <= '0';
             end if;
             
         else
@@ -74,7 +79,7 @@ begin
                 when others => -- Here will be JUMP , 
                     JUMP_SIG<='0'; 
                     Write_enable <='0'; 
-                    Update_flags<='0';
+                    Update_carry_zero<='0';
                     case Flow_add is
                         when "10001" =>
                             -- We consider jump 
@@ -103,16 +108,16 @@ begin
                                    end case; 
                                 end if;
                             when "10011" => -- Call --
-                            
-                            when "10000" => -- Return --
+                                Interupt_flag_en<='1';
+--                            when "10000" => -- Return -- will fix latter basically Return stops from
                                                      
                             when others => -- Here will be interupts and other --
-                                
+                                AJunge_in_ultmia_parte <='1';
                                 case Memorie_in_instruction is
                                       when "1000000000110000"=> --  Interupt Enable -- 
-                                      
+                                            Interupt_flag_en <= '1';
                                       when "1000000000010000" => -- Interupt disable -- 
-                                      
+                                            Interupt_flag_off <= '1';
                                       when "1000000011110000" => -- Returni Enable-- 
                                       
                                       when "1000000011010000" => -- Returni Disable
