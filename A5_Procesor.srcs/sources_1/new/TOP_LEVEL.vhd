@@ -17,6 +17,9 @@ entity TOP_LEVEL is
           RST : in STD_LOGIC;
           Interupt_led : out STD_LOGIC;
           Interupt_sw : in STD_LOGIC;
+          Write_str : out STD_LOGIC; -- this could be used for FIFO reading -- 
+          Input_sw : in STD_LOGIC_VECTOR(7 downto 0);
+          Read_str : out STD_LOGIC; -- this does into SSD driver -- 
           Operation_out : out STD_LOGIC_VECTOR(7 downto 0);
           Adress_debug : out STD_LOGIC_VECTOR(15 downto 0)
           );
@@ -67,22 +70,30 @@ architecture Structural of TOP_LEVEL is
     component CP_TOP_LEVEL is
     port( CLK : in STD_LOGIC;
           RST : in STD_LOGIC;
-          Hold_From_Interupter : in STD_LOGIC;
-          -- Flags from ALU -- 
+          -- Interupts logic
+          Hold_From_Interupter : in STD_LOGIC; -- From Interuptor its hold all signall -- 
+          -- Flags from ALU -- entering the Memory instructions --
           Zero_Flag : in STD_LOGIC;
           Carry_Flag : in STD_LOGIC;
           -- Rotation -- 
-          Rotation_flag : out STD_LOGIC;
+          Rotation_flag_out : out STD_LOGIC;
+          Rotation_code_out : out STD_LOGIC_VECTOR(3 downto 0);
+          -- Interupt flags -- 
           Interupt_flag_en : out STD_LOGIC;
           Interupt_flag_off : out STD_LOGIC;
+          -- write into register / flag  
+          Update_carry_zero : out STD_LOGIC;
           Write_enable : out STD_LOGIC;
           -- Mostly used for Debuging -- 
           Addres_out : out STD_LOGIC_VECTOR(15 downto 0);
           -- Signal for deciding using Constant or Register -- 
           Konstant : out STD_LOGIC;
+          Konstant_I_O : out STD_LOGIC;
+          -- Input/Output signals --
+          Write_str : out STD_LOGIC;
+          Read_str : out STD_LOGIC;
           -- SIGNALS FOR ADD, SUB, MOV , JUMP , XOR , AND ... -- 
-          ALU_OUT : out STD_LOGIC_VECTOR(2 downto 0);
-          Update_carry_zero : out STD_LOGIC
+          ALU_OUT : out STD_LOGIC_VECTOR(2 downto 0)
           );
     end component;
     
@@ -114,7 +125,9 @@ architecture Structural of TOP_LEVEL is
     
     -- Interanl signals for PC top level -- 
     signal rotation_flag_PC : STD_LOGIC :='0';
+    signal Rotation_code_PC : STD_LOGIC_VECTOR(3 downto 0) := (others => '0');
     signal Konstant_from_PC : STD_LOGIC :='0';
+    signal Konstant_I_O_PC : STD_LOGIC := '0';
     signal ALU_SEL_PC : STD_LOGIC_VECTOR(2 downto 0) :=(others=>'0');
     signal Write_PC_REG : STD_LOGIC :='0';
     signal Konstant_B : STD_LOGIC_VECTOR(7 downto 0) :=(others=>'0');
@@ -124,7 +137,7 @@ architecture Structural of TOP_LEVEL is
     -- Flags register signals -- 
     signal Carry_Flag : STD_LOGIC;
     signal Zero_Flag : STD_LOGIC;
-    
+    signal Write_strobe_interanl : STD_LOGIC;
     -- Mux decide konstant or B -- 
     signal B_final : STD_LOGIC_VECTOR(7 downto 0) :=(others =>'0');
     signal Add_KK : STD_LOGIC_VECTOR(7 downto 0) := (others=>'0');
@@ -167,21 +180,25 @@ begin
     );
     
     PC : CP_TOP_LEVEL port map(
-        CLK => CLK,
-        RST => RST,
-        Hold_From_Interupter => Hold_flags,
-        Interupt_flag_en => Enable_interupt_PC,
-        Interupt_flag_off => Disable_interupt_PC,
-        Zero_flag => Zero_flag,
-        Carry_flag => Carry_flag, 
-        Rotation_flag=> rotation_flag_PC,
-        Addres_out => Address_aux,
-        Write_enable => Write_PC_REG, 
-        Konstant => Konstant_from_PC,
-        ALU_out => ALU_SEL_PC,
-        Update_carry_zero=> Update_carry_zero_PC
+       CLK => CLK,
+       RST => RST,
+       Hold_From_Interupter => Hold_flags,
+       Zero_Flag => Zero_Flag,
+       Carry_Flag => Carry_Flag,
+       Rotation_flag_out => rotation_flag_PC,
+       Rotation_code_out => Rotation_code_PC,
+       Interupt_flag_en => Enable_interupt_PC,
+       Interupt_flag_off => Disable_interupt_PC, 
+       Update_carry_zero => Update_carry_zero_PC,
+       Write_enable => Write_PC_REG,
+       Addres_out => Address_aux,
+       Konstant => Konstant_from_PC ,
+       Konstant_I_O => Konstant_I_O_PC ,
+       Write_str =>  Write_strobe_interanl ,
+       Read_str => Read_str,
+       ALU_OUT => ALU_SEL_PC
     );
-    
+    Write_str <= Write_strobe_interanl;
     Adress_debug <= Address_aux;
     
     Sx_index <= Address_aux(11 downto 8);
