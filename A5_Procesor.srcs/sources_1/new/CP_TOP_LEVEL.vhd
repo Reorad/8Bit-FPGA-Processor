@@ -24,8 +24,8 @@ entity CP_TOP_LEVEL is
           -- write into register / flag  
           Update_carry_zero : out STD_LOGIC;
           Write_enable : out STD_LOGIC;
-          -- Mostly used for Debuging -- 
           Addres_out : out STD_LOGIC_VECTOR(15 downto 0);
+          PC_Out_Debug : out STD_LOGIC_VECTOR(7 downto 0);
           -- Signal for deciding using Constant or Register -- 
           Konstant : out STD_LOGIC;
           Konstant_I_O : out STD_LOGIC;
@@ -142,6 +142,8 @@ begin
                     Carry_flag => Carry_Flag, 
                     Memorie_debug_instuction => Addres_out
                     );
+                    
+     PC_Out_Debug <= PC_INDEX_TO_ROM;
        
 
 end Structural;

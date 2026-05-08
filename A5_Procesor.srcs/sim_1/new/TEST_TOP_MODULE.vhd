@@ -16,19 +16,20 @@ entity Test_Top_level is
 end Test_Top_level;
 
 architecture Test of Test_Top_level is
-component TOP_LEVEL is 
-port(
+component Procesor_Top_level is
+    port(
           CLk : in STD_LOGIC;
           RST : in STD_LOGIC;
           Interupt_led : out STD_LOGIC;
           Interupt_sw : in STD_LOGIC;
-          Input_sw : in STD_LOGIC_VECTOR(7 downto 0);
           Write_str : out STD_LOGIC; -- this could be used for FIFO reading -- 
+          Input_sw : in STD_LOGIC_VECTOR(7 downto 0);
           Read_str : out STD_LOGIC; -- this does into SSD driver -- 
+          Konstant_I_O : out STD_LOGIC;
           Operation_out : out STD_LOGIC_VECTOR(7 downto 0);
           Adress_debug : out STD_LOGIC_VECTOR(15 downto 0)
           );
-    end component;
+end component;
     
     signal CLK : STD_LOGIC :='0';
     signal RST : STD_LOGIC :='0';
@@ -39,9 +40,10 @@ port(
     signal Int_sw : STD_LOGIC :='0';
     signal Int_led : STD_LOGIC;
     signal INPUT_SW : STD_LOGIC_VECTOR(7 downto 0) :=(others =>'0');
+    signal Decide_port_id : STD_LOGIC := '0';
 begin
 
-    UUT : TOP_LEVEL port map(
+    UUT : Procesor_Top_level port map(
         CLK => CLK,
         RST => RST,
         Interupt_led => Int_led,
@@ -50,6 +52,7 @@ begin
         Input_sw => INPUT_SW,
         Read_str => RED_STRB ,
         Operation_out => Operation_out,
+        Konstant_I_O => Decide_port_id,
         Adress_debug => Adress_debug    
     );
     

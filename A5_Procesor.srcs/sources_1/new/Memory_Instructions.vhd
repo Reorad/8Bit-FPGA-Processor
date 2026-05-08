@@ -1,4 +1,3 @@
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
@@ -20,7 +19,7 @@ entity Memory_Instructions is
           Decide_I_O_KK : out STD_LOGIC; -- bcus I dont want to connect the register file to decoder --
           Write_strobe_signal : out STD_LOGIC;
           Read_strobe_signal : out STD_LOGIC;
-           
+          
           -- Interupts flags --
           Interupt_flag_en : out STD_LOGIC;
           Interupt_flag_off : out STD_LOGIC;
@@ -54,11 +53,9 @@ begin
     -- Signal out to Mux that decides between constnat and register value --
     Mux_B_decide <= Memorie_in_instruction(15);
     
-    
-    
     -- COMBINATIONAL PART -- 
     -- since its easier to write in a process --
-    process (Memorie_in_instruction, Op_Register_KK, Operation_code_first, Flow_add)
+    process (Memorie_in_instruction, Op_Register_KK, Operation_code_first, Flow_add, Conditional_type, Conditions_flags, Zero_flag, Carry_flag)
     begin 
         -- setting all signal on default vallue --
             
@@ -69,10 +66,10 @@ begin
         -- TO ALU --
         ALU_Sel <= (others => '0');
         Rotation_Signal <='0';    
+        Rotation_code <= (others => '0');
         -- Most instructions write back / modify flags --
         Write_enable <= '1'; 
         Update_carry_zero <= '1';
-        Memorie_debug_instuction <= (others =>'0');        
         Memorie_debug_instuction <= Memorie_in_instruction;
         
         -- Interupt flags --
@@ -153,24 +150,30 @@ begin
                                           when others => -- nothing happends -- 
                                    end case; 
                                 end if;
-                            when "10011" => -- Call --
+--                          when "10011" => -- Call --
                                 
---                          when "10000" => -- Return -- will fix latter basically Return stops from
-                                                     
                             when others => -- Here will be interupts and other --
                                 
                                 case Memorie_in_instruction is
                                       when "1000000000110000"=> --  Interupt Enable -- 
                                             Interupt_flag_en <= '1';
+                                            Write_enable <= '0';
+                                            Update_carry_zero <= '0';
                                       when "1000000000010000" => -- Interupt disable -- 
                                             Interupt_flag_off <= '1';
+                                            Write_enable <= '0';
+                                            Update_carry_zero <= '0';
                                       when "1000000011110000" => -- Returni Enable-- 
+                                            Write_enable <= '0';
+                                            Update_carry_zero <= '0';
                                       
                                       when "1000000011010000" => -- Returni Disable
+                                            Write_enable <= '0';
+                                            Update_carry_zero <= '0';
                                       
                                       when others => -- DONE --
                                       
-                                end case; 
+                                end case;
                     end case;                    
             end case;
         end if;
