@@ -13,9 +13,10 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity Output_Component is
-    port( Write_strobe : in STD_LOGIC;
-          CLK : in STD_LOGIC;
+    port( CLK : in STD_LOGIC;
           RST : in STD_LOGIC;
+          Write_strobe : in STD_LOGIC;
+          Read_strobe : in STD_LOGIC;
           Interupt_led : in STD_LOGIC;
           Data_from_procesor : in STD_LOGIC_VECTOR(7 downto 0);
           Data_to_7seg : out STD_LOGIC_VECTOR(11 downto 0);
@@ -26,9 +27,10 @@ end Output_Component;
 architecture Behavioral of Output_Component is
     
     component Controler_FSM_Data_print is
-    port( Write_strobe : in STD_LOGIC;
+    port( CLK : in STD_LOGIC;
           RST : in STD_LOGIC;
-          CLK : in STD_LOGIC;
+          Read_strobe : in STD_LOGIC;
+          Write_strobe : in STD_LOGIC;
           Interupt_strobe : in STD_LOGIC;
           Data_from_print : in STD_LOGIC_VECTOR(11 downto 0);
           Dont_print : out STD_LOGIC;
@@ -53,6 +55,7 @@ begin
         RST => RST,
         CLK => CLK,
         Write_strobe => Write_strobe,
+        Read_strobe => Read_strobe,
         Interupt_strobe => Interupt_led,
         Data_from_print => Data_out_aux,
         Dont_print => Disable_anode,

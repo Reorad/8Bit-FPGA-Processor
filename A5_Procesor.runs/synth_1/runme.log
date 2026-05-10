@@ -8,7 +8,7 @@
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat May  9 01:58:35 2026
+  **** Start of session at: Sat May  9 19:31:48 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -25,9 +25,9 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 14436
+INFO: [Synth 8-7075] Helper process launched with PID 15764
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1263.141 ; gain = 541.699
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1264.121 ; gain = 542.910
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'Pico_Blazer_Top_Level' [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Pico_Blazer_Top_Level.vhd:29]
 INFO: [Synth 8-3491] module 'MPG' declared at 'D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/MPG.vhd:6' bound to instance 'Processor_Advance_button' of component 'MPG' [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Pico_Blazer_Top_Level.vhd:79]
@@ -35,16 +35,16 @@ INFO: [Synth 8-638] synthesizing module 'MPG' [D:/Facultate/Proiect_DSD/A5_Proce
 INFO: [Synth 8-256] done synthesizing module 'MPG' (0#1) [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/MPG.vhd:12]
 INFO: [Synth 8-3491] module 'Procesor_Complete' declared at 'D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Procesor_Complete.vhd:14' bound to instance 'Pico_Blazeee' of component 'Procesor_Complete' [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Pico_Blazer_Top_Level.vhd:84]
 INFO: [Synth 8-638] synthesizing module 'Procesor_Complete' [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Procesor_Complete.vhd:36]
-INFO: [Synth 8-3491] module 'Input_Component' declared at 'D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Input_Component.vhd:14' bound to instance 'Input' of component 'Input_Component' [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Procesor_Complete.vhd:86]
+INFO: [Synth 8-3491] module 'Input_Component' declared at 'D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Input_Component.vhd:14' bound to instance 'Input' of component 'Input_Component' [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Procesor_Complete.vhd:92]
 INFO: [Synth 8-638] synthesizing module 'Input_Component' [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Input_Component.vhd:24]
 WARNING: [Synth 8-614] signal 'NUMB_CONV' is read in the process but is not in the sensitivity list [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Input_Component.vhd:41]
 INFO: [Synth 8-256] done synthesizing module 'Input_Component' (0#1) [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Input_Component.vhd:24]
-INFO: [Synth 8-3491] module 'Procesor_Top_level' declared at 'D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/TOP_LEVEL.vhd:14' bound to instance 'Procesor' of component 'Procesor_Top_level' [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Procesor_Complete.vhd:96]
-INFO: [Synth 8-638] synthesizing module 'Procesor_Top_level' [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/TOP_LEVEL.vhd:31]
-INFO: [Synth 8-3491] module 'Interupter' declared at 'D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Interupter.vhd:14' bound to instance 'Interuptor' of component 'Interupter' [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/TOP_LEVEL.vhd:177]
-INFO: [Synth 8-638] synthesizing module 'Interupter' [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Interupter.vhd:29]
-INFO: [Synth 8-256] done synthesizing module 'Interupter' (0#1) [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Interupter.vhd:29]
-INFO: [Synth 8-3491] module 'CP_TOP_LEVEL' declared at 'D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/CP_TOP_LEVEL.vhd:10' bound to instance 'PC' of component 'CP_TOP_LEVEL' [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/TOP_LEVEL.vhd:187]
+INFO: [Synth 8-3491] module 'Procesor_Top_level' declared at 'D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/TOP_LEVEL.vhd:14' bound to instance 'Procesor' of component 'Procesor_Top_level' [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Procesor_Complete.vhd:102]
+INFO: [Synth 8-638] synthesizing module 'Procesor_Top_level' [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/TOP_LEVEL.vhd:32]
+INFO: [Synth 8-3491] module 'Interupter' declared at 'D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Interupter.vhd:14' bound to instance 'Interuptor' of component 'Interupter' [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/TOP_LEVEL.vhd:180]
+INFO: [Synth 8-638] synthesizing module 'Interupter' [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Interupter.vhd:30]
+INFO: [Synth 8-256] done synthesizing module 'Interupter' (0#1) [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Interupter.vhd:30]
+INFO: [Synth 8-3491] module 'CP_TOP_LEVEL' declared at 'D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/CP_TOP_LEVEL.vhd:10' bound to instance 'PC' of component 'CP_TOP_LEVEL' [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/TOP_LEVEL.vhd:191]
 INFO: [Synth 8-638] synthesizing module 'CP_TOP_LEVEL' [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/CP_TOP_LEVEL.vhd:40]
 INFO: [Synth 8-3491] module 'CP_Register' declared at 'D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/CP_Register.vhd:14' bound to instance 'PC' of component 'CP_Register' [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/CP_TOP_LEVEL.vhd:106]
 INFO: [Synth 8-638] synthesizing module 'CP_Register' [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/CP_Register.vhd:26]
@@ -61,31 +61,31 @@ INFO: [Synth 8-638] synthesizing module 'Memory_Instructions' [D:/Facultate/Proi
 INFO: [Synth 8-226] default block is never used [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Memory_Instructions.vhd:133]
 INFO: [Synth 8-256] done synthesizing module 'Memory_Instructions' (0#1) [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Memory_Instructions.vhd:34]
 INFO: [Synth 8-256] done synthesizing module 'CP_TOP_LEVEL' (0#1) [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/CP_TOP_LEVEL.vhd:40]
-INFO: [Synth 8-3491] module 'REGISTER_File' declared at 'D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/REGISTER_File.vhd:10' bound to instance 'Registers' of component 'REGISTER_File' [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/TOP_LEVEL.vhd:216]
+INFO: [Synth 8-3491] module 'REGISTER_File' declared at 'D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/REGISTER_File.vhd:10' bound to instance 'Registers' of component 'REGISTER_File' [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/TOP_LEVEL.vhd:220]
 INFO: [Synth 8-638] synthesizing module 'REGISTER_File' [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/REGISTER_File.vhd:24]
 WARNING: [Synth 8-614] signal 'Write_in' is read in the process but is not in the sensitivity list [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/REGISTER_File.vhd:35]
 INFO: [Synth 8-256] done synthesizing module 'REGISTER_File' (0#1) [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/REGISTER_File.vhd:24]
-INFO: [Synth 8-3491] module 'Constant_Decider' declared at 'D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Constant_Decider.vhd:14' bound to instance 'Konstant' of component 'Constant_Decider' [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/TOP_LEVEL.vhd:229]
+INFO: [Synth 8-3491] module 'Constant_Decider' declared at 'D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Constant_Decider.vhd:14' bound to instance 'Konstant' of component 'Constant_Decider' [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/TOP_LEVEL.vhd:233]
 INFO: [Synth 8-638] synthesizing module 'Constant_Decider' [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Constant_Decider.vhd:22]
 INFO: [Synth 8-256] done synthesizing module 'Constant_Decider' (0#1) [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Constant_Decider.vhd:22]
-INFO: [Synth 8-3491] module 'Constant_Decider' declared at 'D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Constant_Decider.vhd:14' bound to instance 'Input_Operation' of component 'Constant_Decider' [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/TOP_LEVEL.vhd:236]
-INFO: [Synth 8-3491] module 'ALU_8_BITS' declared at 'D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/ALU_8_BITS.vhd:11' bound to instance 'ALU' of component 'ALU_8_BITS' [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/TOP_LEVEL.vhd:243]
+INFO: [Synth 8-3491] module 'Constant_Decider' declared at 'D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Constant_Decider.vhd:14' bound to instance 'Input_Operation' of component 'Constant_Decider' [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/TOP_LEVEL.vhd:240]
+INFO: [Synth 8-3491] module 'ALU_8_BITS' declared at 'D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/ALU_8_BITS.vhd:11' bound to instance 'ALU' of component 'ALU_8_BITS' [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/TOP_LEVEL.vhd:247]
 INFO: [Synth 8-638] synthesizing module 'ALU_8_BITS' [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/ALU_8_BITS.vhd:23]
 INFO: [Synth 8-226] default block is never used [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/ALU_8_BITS.vhd:32]
 INFO: [Synth 8-256] done synthesizing module 'ALU_8_BITS' (0#1) [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/ALU_8_BITS.vhd:23]
-INFO: [Synth 8-3491] module 'Flags_Register' declared at 'D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Flags_Register.vhd:14' bound to instance 'Flag_register' of component 'Flags_Register' [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/TOP_LEVEL.vhd:254]
+INFO: [Synth 8-3491] module 'Flags_Register' declared at 'D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Flags_Register.vhd:14' bound to instance 'Flag_register' of component 'Flags_Register' [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/TOP_LEVEL.vhd:258]
 INFO: [Synth 8-638] synthesizing module 'Flags_Register' [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Flags_Register.vhd:29]
 INFO: [Synth 8-256] done synthesizing module 'Flags_Register' (0#1) [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Flags_Register.vhd:29]
-INFO: [Synth 8-256] done synthesizing module 'Procesor_Top_level' (0#1) [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/TOP_LEVEL.vhd:31]
-INFO: [Synth 8-3491] module 'Output_Component' declared at 'D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Output_Component.vhd:15' bound to instance 'Output' of component 'Output_Component' [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Procesor_Complete.vhd:116]
-INFO: [Synth 8-638] synthesizing module 'Output_Component' [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Output_Component.vhd:26]
-INFO: [Synth 8-3491] module 'Controler_FSM_Data_print' declared at 'D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Controler_FSM_Data_print.vhd:14' bound to instance 'Buffer_digits' of component 'Controler_FSM_Data_print' [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Output_Component.vhd:52]
-INFO: [Synth 8-638] synthesizing module 'Controler_FSM_Data_print' [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Controler_FSM_Data_print.vhd:25]
-INFO: [Synth 8-256] done synthesizing module 'Controler_FSM_Data_print' (0#1) [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Controler_FSM_Data_print.vhd:25]
-INFO: [Synth 8-3491] module 'BCD_conv' declared at 'D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/BCD_conv.vhd:14' bound to instance 'Convertor_digits' of component 'BCD_conv' [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Output_Component.vhd:64]
+INFO: [Synth 8-256] done synthesizing module 'Procesor_Top_level' (0#1) [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/TOP_LEVEL.vhd:32]
+INFO: [Synth 8-3491] module 'Output_Component' declared at 'D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Output_Component.vhd:15' bound to instance 'Output' of component 'Output_Component' [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Procesor_Complete.vhd:123]
+INFO: [Synth 8-638] synthesizing module 'Output_Component' [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Output_Component.vhd:27]
+INFO: [Synth 8-3491] module 'Controler_FSM_Data_print' declared at 'D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Controler_FSM_Data_print.vhd:14' bound to instance 'Buffer_digits' of component 'Controler_FSM_Data_print' [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Output_Component.vhd:54]
+INFO: [Synth 8-638] synthesizing module 'Controler_FSM_Data_print' [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Controler_FSM_Data_print.vhd:26]
+INFO: [Synth 8-256] done synthesizing module 'Controler_FSM_Data_print' (0#1) [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Controler_FSM_Data_print.vhd:26]
+INFO: [Synth 8-3491] module 'BCD_conv' declared at 'D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/BCD_conv.vhd:14' bound to instance 'Convertor_digits' of component 'BCD_conv' [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Output_Component.vhd:67]
 INFO: [Synth 8-638] synthesizing module 'BCD_conv' [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/BCD_conv.vhd:22]
 INFO: [Synth 8-256] done synthesizing module 'BCD_conv' (0#1) [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/BCD_conv.vhd:22]
-INFO: [Synth 8-256] done synthesizing module 'Output_Component' (0#1) [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Output_Component.vhd:26]
+INFO: [Synth 8-256] done synthesizing module 'Output_Component' (0#1) [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Output_Component.vhd:27]
 INFO: [Synth 8-256] done synthesizing module 'Procesor_Complete' (0#1) [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Procesor_Complete.vhd:36]
 INFO: [Synth 8-3491] module 'SSD_Driver' declared at 'D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/SSD_Driver.vhd:34' bound to instance 'Segmed7print' of component 'SSD_Driver' [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Pico_Blazer_Top_Level.vhd:99]
 INFO: [Synth 8-638] synthesizing module 'SSD_Driver' [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/SSD_Driver.vhd:44]
@@ -101,18 +101,18 @@ INFO: [Synth 8-256] done synthesizing module 'SSD_Driver' (0#1) [D:/Facultate/Pr
 INFO: [Synth 8-256] done synthesizing module 'Pico_Blazer_Top_Level' (0#1) [D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Pico_Blazer_Top_Level.vhd:29]
 WARNING: [Synth 8-7129] Port Z_flag_past in module ALU_8_BITS is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1387.609 ; gain = 666.168
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1388.543 ; gain = 667.332
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1387.609 ; gain = 666.168
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1388.543 ; gain = 667.332
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1387.609 ; gain = 666.168
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1388.543 ; gain = 667.332
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1387.609 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1388.543 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -123,31 +123,31 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/Pico_Blazer_Top_Level_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1454.910 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1469.480 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1454.910 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1469.480 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1454.910 ; gain = 733.469
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1469.480 ; gain = 748.270
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35ticpg236-1L
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1454.910 ; gain = 733.469
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1469.480 ; gain = 748.270
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1454.910 ; gain = 733.469
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1469.480 ; gain = 748.270
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1454.910 ; gain = 733.469
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1469.480 ; gain = 748.270
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -165,14 +165,14 @@ Detailed RTL Component Info :
 	               31 Bit    Registers := 3     
 	               12 Bit    Registers := 1     
 	                8 Bit    Registers := 17    
-	                1 Bit    Registers := 11    
+	                1 Bit    Registers := 12    
 +---Muxes : 
 	   2 Input   31 Bit        Muxes := 1     
 	 257 Input   16 Bit        Muxes := 1     
 	   2 Input   12 Bit        Muxes := 1     
 	   2 Input    8 Bit        Muxes := 8     
 	   7 Input    8 Bit        Muxes := 1     
-	   2 Input    4 Bit        Muxes := 5     
+	   2 Input    4 Bit        Muxes := 4     
 	   7 Input    4 Bit        Muxes := 1     
 	   4 Input    4 Bit        Muxes := 2     
 	   2 Input    3 Bit        Muxes := 2     
@@ -197,25 +197,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 1477.379 ; gain = 755.938
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1482.543 ; gain = 761.332
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1576.109 ; gain = 854.668
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1583.215 ; gain = 862.004
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1653.250 ; gain = 931.809
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1664.559 ; gain = 943.348
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1653.250 ; gain = 931.809
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1665.582 ; gain = 944.371
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -233,37 +233,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1860.289 ; gain = 1138.848
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1868.457 ; gain = 1147.246
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1860.289 ; gain = 1138.848
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1868.457 ; gain = 1147.246
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1860.289 ; gain = 1138.848
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1868.457 ; gain = 1147.246
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1860.289 ; gain = 1138.848
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1868.457 ; gain = 1147.246
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1860.289 ; gain = 1138.848
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1868.457 ; gain = 1147.246
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1860.289 ; gain = 1138.848
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1868.457 ; gain = 1147.246
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -281,41 +281,40 @@ Report Cell Usage:
 +------+-------+------+
 |1     |BUFG   |     3|
 |2     |CARRY4 |    34|
-|3     |LUT1   |    18|
-|4     |LUT2   |   104|
-|5     |LUT3   |    32|
-|6     |LUT4   |    44|
-|7     |LUT5   |    69|
-|8     |LUT6   |    74|
-|9     |MUXF7  |     4|
-|10    |FDCE   |   146|
-|11    |FDPE   |     2|
-|12    |FDRE   |    20|
-|13    |IBUF   |    12|
-|14    |OBUF   |    21|
+|3     |LUT1   |    16|
+|4     |LUT2   |    89|
+|5     |LUT3   |    23|
+|6     |LUT4   |    50|
+|7     |LUT5   |    42|
+|8     |LUT6   |    69|
+|9     |FDCE   |   148|
+|10    |FDPE   |     1|
+|11    |FDRE   |    21|
+|12    |IBUF   |    12|
+|13    |OBUF   |    21|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1860.289 ; gain = 1138.848
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1868.457 ; gain = 1147.246
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:22 . Memory (MB): peak = 1860.289 ; gain = 1071.547
-Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1860.289 ; gain = 1138.848
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:22 . Memory (MB): peak = 1868.457 ; gain = 1066.309
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1868.457 ; gain = 1147.246
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1869.441 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 38 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1877.648 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 34 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1873.082 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1881.281 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: c5b60d97
+Synth Design complete | Checksum: 64dbb035
 INFO: [Common 17-83] Releasing license: Synthesis
 83 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 1873.082 ; gain = 1339.930
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1873.082 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 1881.281 ; gain = 1346.199
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1881.281 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.runs/synth_1/Pico_Blazer_Top_Level.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file Pico_Blazer_Top_Level_utilization_synth.rpt -pb Pico_Blazer_Top_Level_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat May  9 01:59:08 2026...
+INFO: [Common 17-206] Exiting Vivado at Sat May  9 19:32:23 2026...

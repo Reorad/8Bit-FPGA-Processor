@@ -45,9 +45,10 @@ architecture Behavioral of Procesor_Complete is
     end component;
     
     component Output_Component is
-    port( Write_strobe : in STD_LOGIC;
-          CLK : in STD_LOGIC;
+    port( CLK : in STD_LOGIC;
           RST : in STD_LOGIC;
+          Write_strobe : in STD_LOGIC;
+          Read_strobe : in STD_LOGIC;
           Interupt_led : in STD_LOGIC;
           Data_from_procesor : in STD_LOGIC_VECTOR(7 downto 0);
           Data_to_7seg : out STD_LOGIC_VECTOR(11 downto 0);
@@ -58,6 +59,7 @@ architecture Behavioral of Procesor_Complete is
     component Procesor_Top_level is
     port(
           CLk : in STD_LOGIC;
+          CLK_Fast : in STD_LOGIC;
           RST : in STD_LOGIC;
           Interupt_led : out STD_LOGIC;
           Interupt_sw : in STD_LOGIC;
@@ -80,8 +82,12 @@ architecture Behavioral of Procesor_Complete is
     signal Adress_debug :  STD_LOGIC_VECTOR(15 downto 0);
     signal Konstant_I_O_from_dec: STD_LOGIC;
     signal Anode_disable_signal : STD_LOGIC := '0';
+
+    signal Int_latch : STD_LOGIC := '0';
     
 begin
+
+    
     
     Input : Input_Component port map(
         Sx => Register_SX,
@@ -95,9 +101,10 @@ begin
     
     Procesor : Procesor_Top_level port map(
             CLK => CLK,
+            CLK_Fast => CLK_Fast,
             RST => RST, 
             Interupt_led => Led_interupt_aux,
-            Interupt_sw => Interupt_switch,
+            Interupt_sw => Interupt_switch,  
             Input_sw => Final_switches_Inp,
             Write_str => Write_stb_aux,
             Read_str => Read_stb_aux,
@@ -120,7 +127,8 @@ begin
         Data_from_procesor => Register_SX,
         Data_to_7seg => Data_out_digits,
         Disable_anode => Anode_disable_signal,
-        Write_strobe => Write_stb_aux
+        Write_strobe => Write_stb_aux,
+        Read_strobe => Read_stb_aux
     );
     
     

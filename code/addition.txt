@@ -1,0 +1,20 @@
+0: INPUT  s0, 00    -- user pune nr A pe switch-uri, apasă continue
+1: OUTPUT s0, 00    -- afișezi A (confirmă că l-ai citit)
+2: INPUT  s1, 00    -- user pune nr B pe switch-uri, apasă continue  
+3: ADD    s0, s1    -- s0 = A + B
+4: OUTPUT s0, 00    -- afișezi rezultatul
+5: JUMP   0         -- loop înapoi
+
+0 => "1010" & "0000" & "00000000", -- Input s0 
+
+1 => "1110" & "0000" & "00000000", -- Print s0
+
+2 => "1010" & "0001" & "00000000", -- Input s1
+
+3 => "1110" & "0001" & "00000000", -- Print s1
+
+4 => "1100" & "0001" & "0000" & "0100" -- Add into s1 , s2 ( + is 0100 ) 
+
+5 => "1110" & "0001" & "00000000" -- print s1 aka sum 
+
+6 => "100" & '0' & "00" & "01" & "00000000" -- Jump back into Adress 0 

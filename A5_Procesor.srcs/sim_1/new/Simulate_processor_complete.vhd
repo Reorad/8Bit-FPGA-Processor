@@ -39,6 +39,7 @@ architecture Behavioral of Simulate_processor_complete is
     
     component Procesor_Complete is
     port( CLK : in STD_LOGIC;
+          CLK_Fast : in STD_LOGIC;
           RST : in STD_LOGIC;
           -- Input switches --
           Input_switches : in STD_LOGIC_VECTOR(15 downto 0);
@@ -53,7 +54,8 @@ architecture Behavioral of Simulate_processor_complete is
           Disable_anode : out STD_LOGIC;
           -- Data out is basicllay for output --
           Data_out : out STD_LOGIC_VECTOR(7 downto 0);
-          Data_out_digits : out STD_LOGIC_VECTOR(11 downto 0)
+          Data_out_digits : out STD_LOGIC_VECTOR(11 downto 0);
+          PC_out : out STD_LOGIC_VECTOR(7 downto 0)
         );
     end component;
     
@@ -67,13 +69,16 @@ architecture Behavioral of Simulate_processor_complete is
     signal Write_str_T : STD_LOGIC;
     signal Data_out : STD_LOGIC_VECTOR(7 downto 0);
     signal Data_out_digits : STD_LOGIC_VECTOR(11 downto 0);
-    
+    signal CLK_Fast : STD_LOGIC;
     signal Disable_anode : STD_LOGIC;
+    signal PC_out : STD_LOGIC_VECTOR(7 downto 0);
+
     
 begin
     
     UUT : Procesor_Complete port map(
         CLK => CLK,
+        CLK_fast => CLK,
         RST => RST,
         Input_switches => Input_switches,
         Interupt_switch => Interupt_switch,
@@ -82,7 +87,8 @@ begin
         Write_str_T => Write_str_T,
         Disable_anode => Disable_anode,
         Data_out => Data_out,
-        Data_out_digits => Data_out_digits
+        Data_out_digits => Data_out_digits,
+        PC_out => PC_out
         );
         
         process
@@ -91,6 +97,10 @@ begin
             RST<='1';
             wait for 15ns;
             RST<='0';
+            wait for 20ns;
+            Interupt_switch <='1';
+            wait for 10 ns;
+            Interupt_switch <='0';
             
             wait;
         end process;

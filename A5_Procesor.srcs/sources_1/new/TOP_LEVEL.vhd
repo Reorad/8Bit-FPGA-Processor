@@ -14,6 +14,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity Procesor_Top_level is
     port(
           CLk : in STD_LOGIC;
+          Clk_fast : in STD_LOGIC;
           RST : in STD_LOGIC;
           Interupt_led : out STD_LOGIC;
           Interupt_sw : in STD_LOGIC;
@@ -61,6 +62,7 @@ architecture Structural of Procesor_Top_level is
     port(
     
         CLK : in STD_LOGIC;
+        CLK_Fast : in STD_LOGIC;
         RST : in STD_LOGIC;
         Interupt_sw : in STD_LOGIC;
         Interupt_FLAG : in STD_LOGIC;
@@ -174,8 +176,10 @@ begin
     Update_carry_zero_final <= Update_carry_zero_PC AND (NOT Hold_flags);
     Update_write_final <= Write_PC_REG AND (NOT Hold_flags);
     Konstant_I_O <= Konstant_I_O_PC;
+    
     Interuptor : Interupter port map(
         CLK => CLK,
+        CLK_Fast => CLK_Fast,
         Interupt_FLAG => Interupt_from_flags,
         RST => RST,
         Interupt_sw => Interupt_sw,

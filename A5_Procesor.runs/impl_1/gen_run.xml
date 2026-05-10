@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35ticpg236-1L" LaunchTime="1778281114">
+<GenRun Id="impl_1" LaunchPart="xc7a35ticpg236-1L" LaunchTime="1778344307">
   <File Type="PA-TCL" Name="Pico_Blazer_Top_Level.tcl"/>
   <File Type="REPORTS-TCL" Name="Pico_Blazer_Top_Level_reports.tcl"/>
   <File Type="INIT-TIMING" Name="Pico_Blazer_Top_Level_timing_summary_init.rpt"/>
@@ -56,12 +56,12 @@
   <File Type="ROUTE-RQS-PB" Name="Pico_Blazer_Top_Level_rqs_routed.pb"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="Pico_Blazer_Top_Level_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="Pico_Blazer_Top_Level_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="TOP_LEVEL_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="TOP_LEVEL_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="TOP_LEVEL_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="TOP_LEVEL_bus_skew_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="TOP_LEVEL_bus_skew_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="TOP_LEVEL_bus_skew_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="Pico_Blazer_Top_Level_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="Pico_Blazer_Top_Level_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="Pico_Blazer_Top_Level_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="Pico_Blazer_Top_Level_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="Pico_Blazer_Top_Level_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="Pico_Blazer_Top_Level_bus_skew_postroute_physopted.rpx"/>
   <File Type="NOC_TRAFFIC_SPEC_FILE" Name="Pico_Blazer_Top_Level.nts"/>
   <File Type="NOC_SOLUTION_FILE" Name="Pico_Blazer_Top_Level.ncr"/>
   <File Type="BG-BIT" Name="Pico_Blazer_Top_Level.bit"/>
@@ -267,9 +267,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025">
-      <Desc>Default settings for Implementation.</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025"/>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>

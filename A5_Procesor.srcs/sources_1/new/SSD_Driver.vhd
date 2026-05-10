@@ -99,7 +99,12 @@ begin
     process(Count,Data_from_procesor,Disable_anodes)
         begin
             if (Disable_anodes = '1') then
-                Print_Data_4bits <= "1010"; -- Display 'A' on all digits during interrupt
+                case count is 
+                    when 2 => Print_Data_4bits <= "0001"; -- '1' for I
+                    when 1 => Print_Data_4bits <= "1010"; -- 'A' as closest to N
+                    when 0 => Print_Data_4bits <= "0111"; -- '7' for T
+                    when others => Print_Data_4bits <= (others => '0');
+                end case;
             else
                 case count is 
                     when 0 => Print_Data_4bits <= Data_from_procesor(3 downto 0);  -- Anode one means rightest most digit --

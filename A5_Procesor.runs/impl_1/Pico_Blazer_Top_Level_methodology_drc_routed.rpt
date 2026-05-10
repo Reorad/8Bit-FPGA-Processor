@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
-| Date         : Sat May  9 01:59:48 2026
+| Date         : Sat May  9 19:33:06 2026
 | Host         : Sebi running 64-bit major release  (build 9200)
 | Command      : report_methodology -file Pico_Blazer_Top_Level_methodology_drc_routed.rpt -pb Pico_Blazer_Top_Level_methodology_drc_routed.pb -rpx Pico_Blazer_Top_Level_methodology_drc_routed.rpx
 | Design       : Pico_Blazer_Top_Level
@@ -23,12 +23,12 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max checks: <unlimited>
-             Checks found: 116
+             Checks found: 117
 +-----------+------------------+-------------------------------+--------+
 | Rule      | Severity         | Description                   | Checks |
 +-----------+------------------+-------------------------------+--------+
 | TIMING-17 | Critical Warning | Non-clocked sequential cell   | 106    |
-| TIMING-18 | Warning          | Missing input or output delay | 10     |
+| TIMING-18 | Warning          | Missing input or output delay | 11     |
 +-----------+------------------+-------------------------------+--------+
 
 2. REPORT DETAILS
@@ -200,12 +200,12 @@ Related violations: <none>
 
 TIMING-17#34 Critical Warning
 Non-clocked sequential cell  
-The clock pin Pico_Blazeee/Procesor/Interuptor/Q_led_reg/C is not reached by a timing clock
+The clock pin Pico_Blazeee/Procesor/Interuptor/Hold_all_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#35 Critical Warning
 Non-clocked sequential cell  
-The clock pin Pico_Blazeee/Procesor/Interuptor/is_running_reg_inv/C is not reached by a timing clock
+The clock pin Pico_Blazeee/Procesor/Interuptor/runn_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#36 Critical Warning
@@ -570,45 +570,50 @@ Related violations: <none>
 
 TIMING-18#2 Warning
 Missing input or output delay  
-An input delay is missing on RST relative to the rising and/or falling clock edge(s) of sys_clk_pin.
+An input delay is missing on Interupt_sw relative to the rising and/or falling clock edge(s) of sys_clk_pin.
 Related violations: <none>
 
 TIMING-18#3 Warning
 Missing input or output delay  
-An output delay is missing on Cathodes[0] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
+An input delay is missing on RST relative to the rising and/or falling clock edge(s) of sys_clk_pin.
 Related violations: <none>
 
 TIMING-18#4 Warning
 Missing input or output delay  
-An output delay is missing on Cathodes[1] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
+An output delay is missing on Cathodes[0] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
 Related violations: <none>
 
 TIMING-18#5 Warning
 Missing input or output delay  
-An output delay is missing on Cathodes[2] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
+An output delay is missing on Cathodes[1] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
 Related violations: <none>
 
 TIMING-18#6 Warning
 Missing input or output delay  
-An output delay is missing on Cathodes[3] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
+An output delay is missing on Cathodes[2] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
 Related violations: <none>
 
 TIMING-18#7 Warning
 Missing input or output delay  
-An output delay is missing on Cathodes[4] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
+An output delay is missing on Cathodes[3] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
 Related violations: <none>
 
 TIMING-18#8 Warning
 Missing input or output delay  
-An output delay is missing on Cathodes[5] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
+An output delay is missing on Cathodes[4] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
 Related violations: <none>
 
 TIMING-18#9 Warning
 Missing input or output delay  
-An output delay is missing on Cathodes[6] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
+An output delay is missing on Cathodes[5] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
 Related violations: <none>
 
 TIMING-18#10 Warning
+Missing input or output delay  
+An output delay is missing on Cathodes[6] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
+Related violations: <none>
+
+TIMING-18#11 Warning
 Missing input or output delay  
 An output delay is missing on Cathodes[7] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
 Related violations: <none>

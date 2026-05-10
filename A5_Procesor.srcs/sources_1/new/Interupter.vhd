@@ -15,6 +15,7 @@ entity Interupter is
     port(
     
         CLK : in STD_LOGIC;
+        CLK_Fast : in STD_LOGIC;
         RST : in STD_LOGIC;
         Interupt_sw : in STD_LOGIC;
         Interupt_FLAG : in STD_LOGIC;
@@ -29,43 +30,48 @@ end Interupter;
 architecture Behavioral of Interupter is
     signal Count : natural := 0;
     signal Q_led : STD_LOGIC :='0';
+    signal Int_latch : STD_LOGIC;
 begin
     Trigger_leg <= Q_led;
-
+    
+    process(CLK_Fast, RST)
+    begin
+        if RST = '1' then
+            Int_latch <= '0'; 
+        elsif rising_edge(CLK_Fast) then
+            if Interupt_sw = '1' then
+                Int_latch <= '1';         
+            elsif Q_led = '1' then
+                Int_latch <= '0';          
+            end if;
+        end if;
+    end process;
+    
     process(CLK, RST)
-    variable is_running : std_logic := '0';
-begin
+    variable runn : STD_LOGIC := '0';
+    begin
     if(RST = '1') then
         Hold_all <= '0';
         Done <= '1';
         Count <= 0;
         Q_led <= '0';
-        is_running := '0';
     elsif(rising_edge(CLK)) then
-
-        if (is_running = '0') then
-            if (Interupt_sw = '1' AND Interupt_FLAG = '1' ) then
-                is_running := '1';
-                Hold_all <= '1';
-                Done <= '0';
-                Count <= 0;
-                Q_led <='1';
-            else
-                Hold_all <= '0';
-                Done <= '1';
-                Q_led <='0';
-            end if;
-        else
+    
+        if (Int_latch = '1' AND Interupt_FLAG = '1') then
+            runn := '1';
+            Hold_all <= '1';
+            Done <= '0';
+            Q_led <= '1';
+            Count <= 0;
+        elsif (runn = '1') then
             if (Count = 5) then
-                is_running := '0'; 
-                Hold_all <= '0';
+                runn := '0';
                 Done <= '1';
-                Count <= 0;
+                Hold_all <= '0';
                 Q_led <= '0';
+                Count <= 0;
             else
                 Count <= Count + 1;
-                Hold_all <= '1';
-                Done <= '0';
             end if;
         end if;
     end if;

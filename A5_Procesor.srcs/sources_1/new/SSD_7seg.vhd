@@ -14,22 +14,22 @@ end ssd_7seg;
 architecture Behavioral of ssd_7seg is
 
 begin
-SegOut <= "11000000" when DataIn = "0000" else
-          "11111001" when DataIn = "0001" else
-          "10100100" when DataIn = "0010" else
-          "10110000" when DataIn = "0011" else
-          "10011001" when DataIn = "0100" else
-          "10010010" when DataIn = "0101" else
-          "10000010" when DataIn = "0110" else
-          "11111000" when DataIn = "0111" else 
-          "10000000" when DataIn = "1000" else 
-          "10010000" when DataIn = "1001" else
-          "10001000" when DataIn = "1010" else
-          "10000011" when DataIn = "1011" else
-          "11000110" when DataIn = "1100" else
-          "10100001" when DataIn = "1101" else
-          "10000110" when DataIn = "1110" else
-          "10001110" when DataIn = "1111" else
+SegOut <= "11000000" when DataIn = "0000" else -- 0
+          "11111001" when DataIn = "0001" else -- 1
+          "10100100" when DataIn = "0010" else -- 2
+          "10110000" when DataIn = "0011" else -- 3
+          "10011001" when DataIn = "0100" else -- 4
+          "10010010" when DataIn = "0101" else -- 5
+          "10000010" when DataIn = "0110" else -- 6
+          "11111000" when DataIn = "0111" else -- 7
+          "10000000" when DataIn = "1000" else -- 8
+          "10010000" when DataIn = "1001" else -- 9
+          "10001000" when DataIn = "1010" else -- A
+          "10000011" when DataIn = "1011" else -- B
+          "11000110" when DataIn = "1100" else -- C
+          "10100001" when DataIn = "1101" else -- D
+          "10000110" when DataIn = "1110" else -- E
+          "10001110" when DataIn = "1111" else -- F
           "11111111";
 
 end Behavioral;
