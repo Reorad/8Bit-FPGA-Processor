@@ -15,6 +15,8 @@ entity CP_Register is
     port(   
         CLK : in STD_LOGIC;
         RESET : in STD_LOGIC;
+        PC_HOLD : in STD_LOGIC; -- sound weird but in actuality is done 
+        
         COME_MEM_INS : in STD_LOGIC;
         COME_INS_ADD : in STD_LOGIC_VECTOR(7 downto 0);
         PC_OUT : out STD_LOGIC_VECTOR(7 downto 0)
@@ -29,7 +31,9 @@ begin
         if( RESET = '1' ) then
             Q_aux <= (others => '0');
         elsif ( rising_edge(CLK) ) then
-            if(COME_MEM_INS = '1' ) then
+            if(PC_HOLD = '1')  then 
+                Q_aux <= Q_aux;
+            elsif(COME_MEM_INS = '1' ) then
                 Q_aux<=COME_INS_ADD;
             else
                 Q_aux<=Q_aux+1;

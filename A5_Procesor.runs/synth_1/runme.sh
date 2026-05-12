@@ -41,4 +41,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log TOP_LEVEL.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source TOP_LEVEL.tcl
+EAStep vivado -log Pico_Blazer_Top_Level.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Pico_Blazer_Top_Level.tcl
