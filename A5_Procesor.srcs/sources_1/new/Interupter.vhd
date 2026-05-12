@@ -28,9 +28,10 @@ end Interupter;
     
     
 architecture Behavioral of Interupter is
-    signal Count : natural := 0;
-    signal Q_led : STD_LOGIC :='0';
-    signal Int_latch : STD_LOGIC;
+    signal Count     : natural   := 0;
+    signal Q_led     : STD_LOGIC := '0';
+    signal Int_latch : STD_LOGIC := '0';
+    signal runn      : STD_LOGIC := '0';
 begin
     Trigger_leg <= Q_led;
     
@@ -48,34 +49,33 @@ begin
     end process;
     
     process(CLK, RST)
-    variable runn : STD_LOGIC := '0';
     begin
-    if(RST = '1') then
-        Hold_all <= '0';
-        Done <= '1';
-        Count <= 0;
-        Q_led <= '0';
-    elsif(rising_edge(CLK)) then
-    
-        if (Int_latch = '1' AND Interupt_FLAG = '1') then
-            runn := '1';
-            Hold_all <= '1';
-            Done <= '0';
-            Q_led <= '1';
-            Count <= 0;
-        elsif (runn = '1') then
-            if (Count = 5) then
-                runn := '0';
-                Done <= '1';
-                Hold_all <= '0';
-                Q_led <= '0';
-                Count <= 0;
-            else
-                Count <= Count + 1;
+        if(RST = '1') then
+            Hold_all <= '0';
+            Done     <= '1';
+            Count    <= 0;
+            Q_led    <= '0';
+            runn     <= '0';
+        elsif(rising_edge(CLK)) then
+            if (Int_latch = '1' AND Interupt_FLAG = '1') then
+                runn     <= '1';
+                Hold_all <= '1';
+                Done     <= '0';
+                Q_led    <= '1';
+                Count    <= 0;
+            elsif (runn = '1') then
+                if (Count = 5) then
+                    runn     <= '0';
+                    Done     <= '1';
+                    Hold_all <= '0';
+                    Q_led    <= '0';
+                    Count    <= 0;
+                else
+                    Count <= Count + 1;
+                end if;
             end if;
         end if;
-    end if;
-end process;
+    end process;
 
     
 

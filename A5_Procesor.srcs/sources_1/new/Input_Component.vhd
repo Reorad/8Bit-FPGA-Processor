@@ -21,7 +21,7 @@ entity Input_Component is
 end Input_Component;
 
 
-architecture Behavioral of Input_Component is
+    architecture Behavioral of Input_Component is
     signal NUMB_CONV : integer := 0;
     signal Input_port : STD_LOGIC_VECTOR(7 downto 0) :=(others=>'0'); 
 begin
