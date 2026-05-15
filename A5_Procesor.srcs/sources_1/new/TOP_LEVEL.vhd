@@ -49,6 +49,8 @@ architecture Structural of Procesor_Top_level is
     port( A : in STD_LOGIC_VECTOR(7 downto 0);
           B : in STD_LOGIC_VECTOR(7 downto 0);
           ALU_SEL : in STD_LOGIC_VECTOR(2 downto 0);
+          Rotation_flag : in STD_LOGIC;
+          Rotation_code : in STD_LOGIC_VECTOR(3 downto 0);
           O : out STD_LOGIC_VECTOR(7 downto 0);
           C_flag_future : out STD_LOGIC;
           Z_flag_future : out STD_LOGIC;
@@ -188,6 +190,8 @@ begin
         Done => Done
     );
     
+    
+    
     PC : CP_TOP_LEVEL port map(
        CLK => CLK,
        RST => RST,
@@ -244,11 +248,14 @@ begin
         O => Register_file_input
     );
     
+    
     ALU : ALU_8_BITS port map(
         A => A_operand,
         B => B_final,
         ALU_SEL => ALU_SEL_PC , 
         O => Output_ALU ,
+        Rotation_flag => rotation_flag_PC ,
+        Rotation_code => Rotation_code_PC,
         C_flag_future => C_flag_output_ALU,
         Z_flag_future => Z_flag_output_ALU,
         C_flag_past => Carry_Flag,

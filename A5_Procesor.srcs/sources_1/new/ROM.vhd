@@ -16,7 +16,8 @@ architecture Behavioral of rom is
 
     signal ROM_Mem : ROM_Type:=
     (
-        0 => "0000" & "0000" & "00000001",  -- Load into s0 1
+        
+    0 => "0000" & "0000" & "00000001",  -- Load into s0 1
         
         1 => "1000000000110000",  -- interupt enable
         
