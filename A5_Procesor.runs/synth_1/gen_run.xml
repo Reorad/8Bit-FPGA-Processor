@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7a35ticpg236-1L" LaunchTime="1778825284" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/ALU_8_BITS.dcp">
-  <File Type="PA-TCL" Name="Pico_Blazer_Top_Level.tcl"/>
   <File Type="REPORTS-TCL" Name="Pico_Blazer_Top_Level_reports.tcl"/>
-  <File Type="RDS-RDS" Name="Pico_Blazer_Top_Level.vds"/>
-  <File Type="RDS-PROPCONSTRS" Name="Pico_Blazer_Top_Level_drc_synth.rpt"/>
   <File Type="RDS-UTIL" Name="Pico_Blazer_Top_Level_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="Pico_Blazer_Top_Level_utilization_synth.pb"/>
+  <File Type="PA-TCL" Name="Pico_Blazer_Top_Level.tcl"/>
+  <File Type="RDS-RDS" Name="Pico_Blazer_Top_Level.vds"/>
   <File Type="RDS-DCP" Name="Pico_Blazer_Top_Level.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="Pico_Blazer_Top_Level_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="Pico_Blazer_Top_Level_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/ALU_8_BITS.vhd">

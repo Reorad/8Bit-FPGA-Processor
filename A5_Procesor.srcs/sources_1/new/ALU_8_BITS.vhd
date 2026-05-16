@@ -31,7 +31,7 @@ begin
     Type_roation <= Rotation_code(3);
     Rotation_cods <= Rotation_code(2 downto 0);
     
-    process(ALU_SEL,A,B,C_flag_past,Z_flag_past)
+    process(ALU_SEL,A,B,C_flag_past,Z_flag_past,Type_roation,Rotation_cods,Rotation_flag)
         variable temp : STD_LOGIC_VECTOR(8 downto 0);
         variable temp_rot : STD_LOGIC_VECTOR(7 downto 0); -- rotation --
         begin

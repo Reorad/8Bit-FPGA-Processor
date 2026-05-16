@@ -5,4 +5,29 @@ Running: D:/Vivaldo/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling architecture behavioral of entity xil_defaultlib.Input_Component [input_component_default]
+Compiling architecture behavioral of entity xil_defaultlib.Interupter [interupter_default]
+Compiling architecture behavioral of entity xil_defaultlib.CP_Register [cp_register_default]
+Compiling architecture behavioral of entity xil_defaultlib.rom [rom_default]
+Compiling architecture behavioral of entity xil_defaultlib.Memory_Instructions [memory_instructions_default]
+Compiling architecture structural of entity xil_defaultlib.CP_TOP_LEVEL [cp_top_level_default]
+Compiling architecture behavioral of entity xil_defaultlib.REGISTER_File [register_file_default]
+Compiling architecture behavioral of entity xil_defaultlib.Constant_Decider [constant_decider_default]
+Compiling architecture behavioral of entity xil_defaultlib.ALU_8_BITS [alu_8_bits_default]
+Compiling architecture behavioral of entity xil_defaultlib.Flags_Register [flags_register_default]
+Compiling architecture structural of entity xil_defaultlib.Procesor_Top_level [procesor_top_level_default]
+Compiling architecture behavioral of entity xil_defaultlib.Controler_FSM_Data_print [controler_fsm_data_print_default]
+Compiling architecture behavioral of entity xil_defaultlib.BCD_conv [bcd_conv_default]
+Compiling architecture behavioral of entity xil_defaultlib.Output_Component [output_component_default]
+Compiling architecture behavioral of entity xil_defaultlib.Procesor_Complete [procesor_complete_default]
+Compiling architecture behavioral of entity xil_defaultlib.simulate_processor_complete
+Built simulation snapshot Simulate_processor_complete_behav
