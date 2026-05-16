@@ -120,6 +120,7 @@ begin
                     Update_carry_zero <= '0';
                     Write_enable <= '0';
                 when others => -- Here will be JUMP , 
+                
                     JUMP_SIG<='0'; 
                     Write_enable <='0'; 
                     Update_carry_zero<='0';

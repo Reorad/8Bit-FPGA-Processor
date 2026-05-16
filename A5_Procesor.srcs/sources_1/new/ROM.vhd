@@ -17,7 +17,7 @@ architecture Behavioral of rom is
     signal ROM_Mem : ROM_Type:=
     (
         
-    0 => "0000" & "0000" & "00000001",  -- Load into s0 1
+     0 => "0000" & "0000" & "00000001",  -- Load into s0 1
         
         1 => "1000000000110000",  -- interupt enable
         
@@ -37,20 +37,19 @@ architecture Behavioral of rom is
         
         9 => "1100" & "0001" & "0010" & "0000", -- Load into s1 , sum (s2)
         
-        10 => "1000000000010000", -- Interupt Disabled 
+        10 => "1110" & "0010" & "00000000", -- print Sum
         
-        11 => "1110" & "0010" & "00000000", -- print Sum
+        11 => "0110" & "1010" & "00000001", -- Sub from counter 
         
-        12 => "0110" & "1010" & "00000001", -- Sub from counter 
-        
-        13 => "100" & '1' & "01" & "01" & "00000110",  -- JUMP NZ, addr 6
+        12 => "100" & '1' & "01" & "01" & "00000110",  -- JUMP NZ, addr 6
         
 --        13 => "1010" & "1000" & "00000000", -- Input value in register 8
         
-        14 => "1110" & "1000" & "00000000", -- print value in register 8, 0000 
+        13 => "1110" & "1000" & "00000000", -- print value in register 8, 0000 
         
-        15 => "100" & '0' & "00" & "01" & "00000000",  -- JUMP, addr 0
+        14 => "100" & '0' & "00" & "01" & "00000000",  -- JUMP, addr 0
             others => "0000000000000000"
+
     );
 
 begin
