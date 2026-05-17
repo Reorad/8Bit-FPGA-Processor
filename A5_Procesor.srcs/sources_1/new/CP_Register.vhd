@@ -17,6 +17,9 @@ entity CP_Register is
         RESET : in STD_LOGIC;
         PC_HOLD : in STD_LOGIC; -- sound weird but in actuality is done 
         
+        Is_ret : in STD_LOGIC;
+        Add_ret : in STD_LOGIC_VECTOR(7 downto 0);
+        
         COME_MEM_INS : in STD_LOGIC;
         COME_INS_ADD : in STD_LOGIC_VECTOR(7 downto 0);
         PC_OUT : out STD_LOGIC_VECTOR(7 downto 0)
@@ -35,6 +38,8 @@ begin
                 Q_aux <= Q_aux;
             elsif(COME_MEM_INS = '1' ) then
                 Q_aux<=COME_INS_ADD;
+            elsif(Is_ret ='1') then
+                Q_aux<=Add_ret;
             else
                 Q_aux<=Q_aux+1;
             end if;

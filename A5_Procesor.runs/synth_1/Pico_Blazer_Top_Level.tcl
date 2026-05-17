@@ -91,6 +91,7 @@ read_vhdl -library xil_defaultlib {
   D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/ROM.vhd
   D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/SSD_7seg.vhd
   D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/SSD_Driver.vhd
+  D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Stack_function.vhd
   D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/TOP_LEVEL.vhd
   D:/Facultate/Proiect_DSD/A5_Procesor/A5_Procesor.srcs/sources_1/new/Pico_Blazer_Top_Level.vhd
 }
