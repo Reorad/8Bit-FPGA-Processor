@@ -1,5 +1,9 @@
 # 8-Bit Microprocessor (PicoBlaze Architecture)
 
+A soft-core 8-bit processor written in VHDL and deployed on a Digilent Basys 3 (Xilinx Artix-7). Custom 16-bit instruction set, 16x8-bit register file, interrupt controller and a 16-level hardware call stack.
+
+> **Full design document:** [`docs/A5_Microprocessor_Design_Document.pdf`](docs/A5_Microprocessor_Design_Document.pdf) - 22 pages, including the board screenshots for the user manual below.
+
 ## Table of Contents
 
 1.  [CHAPTER 1: Project Specifications](#1-chapter-1--project-specifications)
@@ -222,30 +226,23 @@ If `C[3] = 0`, it's an unconditional jump (we ignore other conditions) and the `
 
 The project will come loaded with a program written in ROM respecting the PicoBlaze encoding. You can use the Pico Assembler (16-bit instructions) [hasn't been tested yet, but should work]. Recommendation: write an ASM program, decode it manually, and write the binary representation:
 
-![](./images/media/image15.png)
 
 You will have to keep track of the instruction number and its function. Any mistake in encoding may result in unexpected output. It is recommended to write it down or track the instructions. You can use the LEDs on the board as well.
 
-![](./images/media/image16.png)
 
 The `Continue` button is pressed to advance the program. You could change the clock to a slower 1Hz clock, and it would still work. For the pre-loaded Fibonacci program, you must input the N-th Fibonacci number. (Max input is 11, which yields 233).
 
-![](./images/media/image17.png)
 
 When the display shows `EEE`, it means you've hit an `INPUT` instruction. Depending on the input port code, it will take the 8 left switches (for IP ports `127-255`) or the 8 right switches. After setting the desired value on the switches, the program will continue executing.
 
-![](./images/media/image18.png)
 
 For example, choosing to compute the 11th Fibonacci Number outputs 233. 
 The program loops through all Fibonacci numbers, calculating them by the recurrence formula: 2, 3, ... 144, 233. After printing 233, it resets to `000` (due to `Output s8` which is 0). 
 The Fibonacci sequence logic uses `s0, s1 -> 1`, `s2` as the sum (`s2 = s1 + s0`), and `s10` as a counter. The counter subtracts 1 and executes `JUMP NOT ZERO` back to the addition. When finished, it unconditionally jumps back to address `0`.
 
-![](./images/media/image19.png)
-![](./images/media/image20.png)
 
 If the user presses the **Interrupt button**, the next instruction will trigger an interrupt for 5 button presses:
 
-![](./images/media/image21.png)
 
 The interrupted instruction will only execute after the interrupt completes.
 
@@ -267,7 +264,15 @@ For interrupts, we allow them to happen anytime since the Interrupt flag is in a
 
 ## 5. CHAPTER 5: Further Development
 
-- Implementation of `CALL`, `JUMP`, `RETURN` instructions, and a Stack.
+### Implemented since the first release
+
+- **`CALL` / `RETURN` with a hardware stack** (`Stack_function.vhd`): a 16-deep
+  stack of 8-bit return addresses with a stack pointer that starts at 15. On a
+  `CALL` it stores `PC + 1` and decrements the pointer; on a `RETURN` it restores
+  the saved address and increments it back. Covered by `Simulate_Stack.vhd`.
+
+### Still open
+
 - Create UUT (Unit Under Test) testbenches for all sub-components.
 - **UART Integration**: Configure a port to receive instructions from a PC (PicoAssembler output) and send data back to the PC terminal.
 
@@ -295,4 +300,4 @@ For interrupts, we allow them to happen anytime since the Interrupt flag is in a
 
 Project developed by **Șandru Sebastian** and **Cătălin Oltean Marin**.
 
-**GitHub Repository:** [Reorad/A5_Microprocessor](https://github.com/Reorad/A5_Microprocessor)
+**GitHub Repository:** [Reorad/8Bit-FPGA-Processor](https://github.com/Reorad/8Bit-FPGA-Processor)
