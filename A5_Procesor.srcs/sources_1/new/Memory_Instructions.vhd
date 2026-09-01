@@ -19,7 +19,9 @@ entity Memory_Instructions is
           Decide_I_O_KK : out STD_LOGIC; -- bcus I dont want to connect the register file to decoder --
           Write_strobe_signal : out STD_LOGIC;
           Read_strobe_signal : out STD_LOGIC;
-          
+          -- Function call and return --
+          Call_signal : out STD_LOGIC;
+          Return_signal : out STD_LOGIC;
           -- Interupts flags --
           Interupt_flag_en : out STD_LOGIC;
           Interupt_flag_off : out STD_LOGIC;
@@ -38,6 +40,8 @@ architecture Behavioral of Memory_Instructions is
     signal Flow_add : STD_LOGIC_VECTOR(4 downto 0); 
     signal Conditional_type : STD_LOGIC;
     signal Conditions_flags : STD_LOGIC_VECTOR(1 downto 0);
+    signal Dummy_instruction : STD_LOGIC :='0';
+    signal function_call_ret : STD_LOGIC_VECTOR(4 downto 0);
     
 begin
     -- Decides between working constat or registers --
@@ -52,13 +56,15 @@ begin
     Conditions_flags <= Memorie_in_instruction(11 downto 10);
     -- Signal out to Mux that decides between constnat and register value --
     Mux_B_decide <= Memorie_in_instruction(15);
-    
+    function_call_ret <= Memorie_in_instruction(15 downto 13) & Memorie_in_instruction(9 downto 8);
     -- COMBINATIONAL PART -- 
     -- since its easier to write in a process --
-    process (Memorie_in_instruction, Op_Register_KK, Operation_code_first, Flow_add, Conditional_type, Conditions_flags, Zero_flag, Carry_flag)
+    process (Memorie_in_instruction, Op_Register_KK, Operation_code_first, Flow_add, Conditional_type, Conditions_flags, Zero_flag, Carry_flag, function_call_ret)
     begin 
         -- setting all signal on default vallue --
-            
+        -- Function call/return -- 
+        Call_signal <= '0';
+        Return_signal <= '0';    
         -- Jump signal shenanigans --
         JUMP_SIG <= '0';
         Address_JUMP <= (others => '0');
@@ -80,7 +86,10 @@ begin
         Write_strobe_signal <= '0' ;
         Read_strobe_signal <='0';
         Decide_I_O_KK <= '0';
-                
+        
+        -- Debug only --         
+        Dummy_instruction <='0';
+           
         if (Op_Register_KK = '0') then
            
             ALU_Sel <= Memorie_in_instruction(14 downto 12); 
@@ -120,6 +129,7 @@ begin
                     Update_carry_zero <= '0';
                     Write_enable <= '0';
                 when others => -- Here will be JUMP , 
+                
                     JUMP_SIG<='0'; 
                     Write_enable <='0'; 
                     Update_carry_zero<='0';
@@ -170,9 +180,50 @@ begin
                                       when "1000000011010000" => -- Returni Disable
                                             Write_enable <= '0';
                                             Update_carry_zero <= '0';
-                                      
-                                      when others => -- DONE --
-                                      
+                                      when "1000000010000000" =>
+                                            Return_signal <='1';
+                                                    Write_enable <= '0'; 
+                                                    Update_carry_zero <= '0';
+                                        
+                                      when others => -- Function call and return -- 
+                                            
+                                            case function_call_ret is
+                                                when "100" & "11" =>
+                                                    Call_signal <='1';
+                                                    JUMP_SIG <= '1';
+                                                    Address_JUMP <= Memorie_in_instruction(7 downto 0);
+                                                    Write_enable <= '0'; 
+                                                    Update_carry_zero <= '0';
+                                                    
+                                                      
+                                                when others => -- Dummy instruction --
+--                                                    Call_signal <= '0';
+--                                                    Return_signal <= '0';    
+--                                                    -- Jump signal shenanigans --
+--                                                    JUMP_SIG <= '0';
+--                                                    Address_JUMP <= (others => '0');
+                                                    
+--                                                    -- TO ALU --
+--                                                    ALU_Sel <= (others => '0');
+--                                                    Rotation_Signal <='0';    
+--                                                    Rotation_code <= (others => '0');
+--                                                    -- Most instructions write back / modify flags --
+--                                                    Write_enable <= '0'; 
+--                                                    Update_carry_zero <= '0';
+--                                                    Memorie_debug_instuction <= Memorie_in_instruction;
+                                                    
+--                                                    -- Interupt flags --
+--                                                    Interupt_flag_en <= '0';
+--                                                    Interupt_flag_off <= '0';
+                                                    
+--                                                    -- Input / Output signals that may be modified durring instruction --
+--                                                    Write_strobe_signal <= '0' ;
+--                                                    Read_strobe_signal <='0';
+--                                                    Decide_I_O_KK <= '0';     
+                                            end case;
+                                            
+                                            
+                                        
                                 end case;
                     end case;                    
             end case;

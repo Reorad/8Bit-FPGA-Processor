@@ -24,14 +24,10 @@ entity ALU_8_BITS is
 
 architecture Behavioral of ALU_8_BITS is
 
-    signal Type_roation : STD_LOGIC; -- Decides left or right
-    signal Rotation_cods : STD_LOGIC_VECTOR(2 downto 0); -- rotation code simplified
+
 begin  
     
-    Type_roation <= Rotation_code(3);
-    Rotation_cods <= Rotation_code(2 downto 0);
-    
-    process(ALU_SEL,A,B,C_flag_past,Z_flag_past,Type_roation,Rotation_cods,Rotation_flag)
+    process(ALU_SEL,A,B,C_flag_past,Z_flag_past, Rotation_flag, Rotation_code)
         variable temp : STD_LOGIC_VECTOR(8 downto 0);
         variable temp_rot : STD_LOGIC_VECTOR(7 downto 0); -- rotation --
         begin
@@ -67,9 +63,9 @@ begin
                end case;
                
            else
-                if(Type_roation ='1') then -- right rotation
+                if(Rotation_code(3) ='1') then -- right rotation
                     C_flag_future <= A(0);
-                    case Rotation_cods is
+                    case Rotation_code(2 downto 0) is
                         when "110" => -- SR0 
                             temp_rot := '0' & A(7 downto 1);
                         when "111" => -- SR1 
@@ -86,7 +82,7 @@ begin
                         end case;
                     else 
                         C_flag_future <= A(7);
-                        case Rotation_cods is
+                        case Rotation_code(2 downto 0) is
                             when "110" => -- SL0 
                                 temp_rot := A(6 downto 0) & '0';
                             when "111" => -- SL1 
