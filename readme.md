@@ -1,6 +1,6 @@
 # 8-Bit Microprocessor (PicoBlaze Architecture)
 
-A soft-core 8-bit processor written in VHDL and deployed on a Digilent Basys 3 (Xilinx Artix-7). Custom 16-bit instruction set, 16x8-bit register file, interrupt controller and a 16-level hardware call stack.
+A soft-core 8-bit processor written in VHDL and deployed on a Digilent Basys 3 (Xilinx Artix-7). Implements the PicoBlaze (KCPSM) instruction set described in Xilinx/AMD [XAPP213](https://docs.amd.com/v/u/en-US/xapp213): 16-bit instruction word, 16x8-bit register file, interrupt controller and a 16-level hardware call stack.
 
 > **Full design document:** [`docs/A5_Microprocessor_Design_Document.pdf`](docs/A5_Microprocessor_Design_Document.pdf) - 22 pages, including the board screenshots for the user manual below.
 
@@ -266,10 +266,24 @@ For interrupts, we allow them to happen anytime since the Interrupt flag is in a
 
 ### Implemented since the first release
 
-- **`CALL` / `RETURN` with a hardware stack** (`Stack_function.vhd`): a 16-deep
-  stack of 8-bit return addresses with a stack pointer that starts at 15. On a
-  `CALL` it stores `PC + 1` and decrements the pointer; on a `RETURN` it restores
-  the saved address and increments it back. Covered by `Simulate_Stack.vhd`.
+**`CALL` / `RETURN` with a hardware stack** (`Stack_function.vhd`). A 16-deep stack
+of 8-bit return addresses; the stack pointer starts at 15. On a `CALL` the stack
+stores `PC + 1` and the pointer decrements; on a `RETURN` the saved address is
+restored and the pointer increments back. Covered by `Simulate_Stack.vhd`.
+
+The decoder selects these from bits `[15-13]` and `[9-8]` of the instruction
+(signal `function_call_ret`), which is what separates a `CALL` from a `JUMP`:
+both start with `100`, but bits `[9-8]` are `01` for a jump and `11` for a call.
+
+| Instruction | Binary Encoding (Address[15-0]) | Notes |
+| :--- | :--- | :--- |
+| `JUMP` | `100 C[2-0] 01 Add_Jump[7-0]` | bits [9-8] = `01` |
+| `CALL` | `100 xxx 11 Add_Jump[7-0]` | bits [9-8] = `11`; pushes `PC + 1` |
+| `RETURN` | `1000000010000000` | pops the saved address |
+
+> Note: the design document in `docs/` describes the processor as it stood before
+> `CALL`/`RETURN` were added, so the stack is documented here rather than there.
+> `RETURNI` (return from interrupt) is decoded but not yet functional.
 
 ### Still open
 
@@ -296,7 +310,7 @@ For interrupts, we allow them to happen anytime since the Interrupt flag is in a
 
 ## 7. Bibliography
 
-- **XAPP213.PDF** -- Reference for implementation of the PicoBlaze Architecture.
+- **[XAPP213](https://docs.amd.com/v/u/en-US/xapp213)** (Xilinx/AMD) -- "PicoBlaze 8-Bit Microcontroller for Virtex-E and Spartan-II/IIE Devices". The instruction set and overall architecture implemented here follow this application note.
 
 Project developed by **Șandru Sebastian** and **Cătălin Oltean Marin**.
 
