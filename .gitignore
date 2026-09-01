@@ -1,13 +1,20 @@
-# Vivado Specific
-*.jou              # Journal files (comenzile Tcl executate)
-*.log              # Log files
-.Xil/              # Folderul temporar de rulare Vivado
-*.str              # Fișiere de tip "stress" / UI state
+# --- Vivado generated / build output ---
+# Comments must be on their own line: git does NOT support trailing
+# inline comments in .gitignore, which silently broke the old patterns.
 
-# Proiect și Rezultate
-*.runs/            # Rezultatele sintezei și implementării (Sute de MB!)
-*.cache/           # Cache-ul de proiect
-*.hw/              # Hardware dashboard data
-*.sim/             # Rezultatele simulărilor
-*.ip_user_files/   # Fișiere generate pentru IP-uri
-*.gen/             # Surse generate automat
+*.jou
+*.log
+*.str
+.Xil/
+
+*.cache/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+*.gen/
+_ide/
+
+# --- OS noise ---
+Thumbs.db
+.DS_Store
