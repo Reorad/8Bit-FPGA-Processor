@@ -39,6 +39,20 @@ end CP_TOP_LEVEL;
 
 architecture Structural of CP_TOP_LEVEL is
     
+    component Stack_function is
+     port(
+        CLK : in STD_LOGIC;
+        RST : in STD_LOGIC;
+        Is_return : in STD_LOGIC;
+        Is_call : in STD_LOGIC;
+        PC_in : in STD_LOGIC_VECTOR(7 downto 0); -- Adress of PC out -- 
+        PC_out : out STD_LOGIC_VECTOR(7 downto 0);
+        Ret_sig : out STD_LOGIC
+        
+    );
+    end component;
+    
+    
     component CP_Register is
     port(   
         CLK : in STD_LOGIC;
@@ -47,7 +61,8 @@ architecture Structural of CP_TOP_LEVEL is
         PC_HOLD : in STD_LOGIC;
         COME_MEM_INS : in STD_LOGIC;
         COME_INS_ADD : in STD_LOGIC_VECTOR(7 downto 0);
-        
+        Is_ret : in STD_LOGIC;
+        Add_ret : in STD_LOGIC_VECTOR(7 downto 0);
         PC_OUT : out STD_LOGIC_VECTOR(7 downto 0)
     );
     end component;
@@ -80,7 +95,9 @@ architecture Structural of CP_TOP_LEVEL is
           Decide_I_O_KK : out STD_LOGIC; -- bcus I dont want to connect the register file to decoder --
           Write_strobe_signal : out STD_LOGIC;
           Read_strobe_signal : out STD_LOGIC;
-           
+          -- Function call and return --
+          Call_signal : out STD_LOGIC;
+          Return_signal : out STD_LOGIC; 
           -- Interupts flags --
           Interupt_flag_en : out STD_LOGIC;
           Interupt_flag_off : out STD_LOGIC;
@@ -101,14 +118,32 @@ architecture Structural of CP_TOP_LEVEL is
     signal ROM_INSTRUCTION_ADD_DECODER : STD_LOGIC_VECTOR(15 downto 0) := (others=>'0');
     signal Address_out_aux : STD_LOGIC_VECTOR(15 downto 0) :=(others=>'0');
     
-begin
+    signal DECODER_CALL_Stack : STD_LOGIC  :='0';
+    signal DECODER_RET_Stack : STD_LOGIC  :='0';
     
+    signal PC_Ret : STD_LOGIC;
+    signal PC_Ret_Add : STD_LOGIC_VECTOR(7 downto 0);
+    
+begin
+        
+        Stc : Stack_function port map(
+            CLK => CLK,
+            RST => RST,
+            Is_return => DECODER_RET_Stack,
+            Is_call => DECODER_CALL_Stack,
+            PC_in => PC_INDEX_TO_ROM,
+            PC_out => PC_Ret_Add,
+            Ret_sig => PC_Ret 
+        );    
+          
         PC : CP_Register port map(
                 CLK=>CLK,
                 RESET => RST,
                 PC_HOLD => Hold_From_Interupter, 
                 COME_MEM_INS => JUMP_FROM_DECODER,
                 COME_INS_ADD => JUMP_ADDRESS_FROM_DECODER,
+                Is_ret =>PC_Ret ,
+                Add_ret =>PC_Ret_Add ,
                 PC_OUT => PC_INDEX_TO_ROM
                 );
             
@@ -138,6 +173,8 @@ begin
                     Read_strobe_signal => Read_str,
                     Interupt_flag_en =>  Interupt_flag_en,
                     Interupt_flag_off => Interupt_flag_off,
+                    Call_signal => DECODER_CALL_Stack,
+                    Return_signal => DECODER_RET_Stack,
                     Zero_flag =>  Zero_Flag,
                     Carry_flag => Carry_Flag, 
                     Memorie_debug_instuction => Addres_out

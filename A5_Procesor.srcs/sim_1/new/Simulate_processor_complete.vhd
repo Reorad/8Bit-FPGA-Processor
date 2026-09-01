@@ -60,6 +60,7 @@ architecture Behavioral of Simulate_processor_complete is
     end component;
     
     signal CLK : STD_LOGIC;
+    signal CLK_Fast : STD_LOGIC;
     signal RST : STD_LOGIC;
     signal Input_switches : STD_LOGIC_VECTOR(15 downto 0);
     signal Interupt_switch : STD_LOGIC;
@@ -76,7 +77,7 @@ begin
     
     UUT : Procesor_Complete port map(
         CLK => CLK,
-        CLK_fast => CLK,
+        CLK_fast => CLK_Fast,
         RST => RST,
         Input_switches => Input_switches,
         Interupt_switch => Interupt_switch,
@@ -106,9 +107,10 @@ begin
         
         process
         begin
-  
+            CLK_fast <='1';
             CLK<='1';
             wait for 5ns;
+            CLK_fast <='0';
             CLK<='0';
             wait for 5ns;
             
